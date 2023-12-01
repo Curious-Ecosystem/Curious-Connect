@@ -1,0 +1,242 @@
+/*--------------------------------------------------------------
+# Video grid
+--------------------------------------------------------------*/
+
+#videoMediaContainer {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    /* border: 3px solid blue; */
+}
+
+#videoPinMediaContainer {
+    z-index: 1;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    /* animation: show 0.4s ease; */
+    /* border: 3px solid lime; */
+}
+
+.Camera {
+    position: relative;
+    vertical-align: middle;
+    align-self: center;
+    overflow: hidden;
+    display: inline-block;
+    background: transparent;
+    border-radius: 10px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    animation: show 0.4s ease;
+}
+
+/* .Camera:hover {
+    border: 3px solid rgb(113, 157, 239);
+} */
+
+#videoMediaContainer i {
+    position: absolute;
+    display: none;
+    top: 0;
+    color: rgb(0, 255, 71);
+    font-size: 14px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.videoAvatarImage {
+    z-index: 7;
+    position: absolute;
+    display: none;
+    width: var(--vmi-wh);
+    height: var(--vmi-wh);
+    border-radius: 50%;
+}
+
+.audio {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    margin: 5px;
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.username {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.fscreen {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    color: #fff;
+    margin: 5px;
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.videoMenuBar {
+    z-index: 2;
+    position: absolute;
+    display: inline;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    cursor: default;
+    overflow: hidden;
+}
+
+.videoMenuBar input,
+.videoMenuBar button {
+    float: right;
+    color: #fff;
+    background: transparent;
+    border-radius: 5px;
+    display: inline;
+    border: none;
+}
+
+.videoMenuBar button:hover {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+#videoMediaContainer video {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videoCircle {
+    position: absolute;
+    width: var(--vmi-wh);
+    height: var(--vmi-wh);
+    border-radius: 50%;
+    /* center */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.videoDefault {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: '10px';
+}
+
+.init-container {
+    position: relative;
+}
+.init-container video {
+    z-index: 0;
+    position: relative;
+    height: 240px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: var(--videoObjFit);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+video:hover {
+    opacity: 0.9;
+}
+
+video:fullscreen {
+    object-fit: contain;
+    opacity: 1;
+}
+
+.mirror {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+input[type='range'] {
+    /* display: none; */
+    color: #fff;
+    width: 50px;
+    cursor: pointer;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: scale(0.4) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .username {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .username {
+        font-size: 10px;
+    }
+}

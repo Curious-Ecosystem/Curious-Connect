@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    curiousconnectsfu:
+        image: curiousconnect/sfu:latest
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: curiousconnectsfu
+        hostname: curiousconnectsfu
+        restart: unless-stopped
+        volumes:
+            - ./app/src/config.js:/src/app/src/config.js:ro
+            # These volumes are not mandatory, comment if you want to use it
+            # - ./app/:/src/app/:ro
+            # - ./public/:/src/public/:ro
+        ports:
+            - '3010:3010/tcp'
+            - '40000-40100:40000-40100/tcp'
+            - '40000-40100:40000-40100/udp'

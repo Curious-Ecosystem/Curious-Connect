@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:wght@500&display=swap');
+
+/*--------------------------------------------------------------
+# Keyframes
+--------------------------------------------------------------*/
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --body-bg: radial-gradient(#393939, #000000);
+    --border: 1px solid rgb(255 255 255 / 32%);
+    --border-radius: 1rem;
+    --msger-width: 800px;
+    --msger-height: 700px;
+    --msger-bubble-width: 85%;
+    --msger-bg: radial-gradient(#393939, #000000);
+    --wb-width: 800px;
+    --wb-height: 600px;
+    --wb-bg: radial-gradient(#393939, #000000);
+    --select-bg: #2c2c2c;
+    --left-msg-bg: #252d31;
+    --right-msg-bg: #056162;
+    --private-msg-bg: #6b1226;
+    --box-shadow: 0px 8px 16px 0px rgb(0 0 0);
+    --btns-hover-scale: scale(1.1);
+    --settings-bg: radial-gradient(#393939, #000000);
+    --tab-btn-active: rgb(42 42 42 / 70%);
+    --btns-bg-color: rgba(0, 0, 0, 0.7);
+    /* buttons bar horizontal */
+    --btns-top: 50%;
+    --btns-right: 0%;
+    --btns-left: 10px;
+    --btns-margin-left: 0px;
+    --btns-width: 60px;
+    --btns-flex-direction: column;
+    /* buttons bar horizontal
+    --btns-top: 95%;
+    --btns-right: 25%;
+    --btns-left: 50%;
+    --btns-margin-left: -160px;
+    --btns-width: 320px;
+    --btns-flex-direction: row;
+    */
+
+    --transcription-height: 680px;
+    --transcription-width: 420px;
+    --transcription-bg: radial-gradient(#393939, #000000);
+
+    --vmi-wh: 15vw;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
+    --videoObjFit: cover;
+}
+
+* {
+    outline: none;
+    font-family: 'Comfortaa';
+}
+
+html,
+body {
+    top: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--body-bg);
+    /*background: url('../images/background.jpg');*/
+}
+
+/*--------------------------------------------------------------
+# Google Translate
+--------------------------------------------------------------*/
+
+.skiptranslate iframe,
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+#google_translate_element select {
+    background-color: var(--select-bg) !important;
+    box-shadow: none !important;
+}
+
+/*--------------------------------------------------------------
+# Loading...
+--------------------------------------------------------------*/
+
+#loadingDiv {
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+#loadingDiv h1 {
+    padding: 10px;
+    font-size: 60px;
+    font-family: 'Comfortaa';
+    border-radius: 10px;
+}
+#loadingDiv img {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#loadingDiv pre {
+    padding: 10px;
+    font-family: 'Comfortaa';
+    border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Init User
+--------------------------------------------------------------*/
+
+.init-user {
+    display: block;
+    padding: 5px;
+}
+
+.init-user select {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--select-bg) !important;
+    color: white;
+    border: var(--border);
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.init-user button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 50px;
+    background-color: transparent;
+}
+
+.init-user button:hover {
+    color: white;
+    background-color: rgb(35, 35, 35);
+    transform: scale(1);
+}
+
+/*--------------------------------------------------------------
+# Buttons bar
+--------------------------------------------------------------*/
+
+#control {
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    padding: 5px;
+
+    top: var(--btns-top);
+    right: var(--btns-right);
+    left: var(--btns-left);
+    margin-left: var(--btns-margin-left);
+    width: var(--btns-width);
+    flex-direction: var(--btns-flex-direction);
+
+    justify-content: space-around;
+    grid-gap: 0.4rem;
+
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+
+    /* border: var(--border); */
+    border-radius: 10px;
+}
+
+#control button {
+    font-size: 1rem;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    background: var(--btns-bg-color);
+    border-radius: 10px;
+    border: var(--border);
+    /* box-shadow: var(--box-shadow); */
+}
+
+#control button i {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 540px) {
+    #control button {
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
+
+#exitButton {
+    color: red;
+}
+
+/*--------------------------------------------------------------
+# Init Audio/Video buttons
+--------------------------------------------------------------*/
+
+#initAudioButton,
+#initVideoButton,
+#initAudioVideoButton,
+#initStartScreenButton,
+#initStopScreenButton {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: var(--border);
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Room QR
+--------------------------------------------------------------*/
+
+#qrRoomContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------------------------------------------------
+# My settings
+--------------------------------------------------------------*/
+
+#mySettings {
+    z-index: 6;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    min-height: 480px;
+    background: var(--settings-bg);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mySettingsMain {
+    display: flex;
+}
+
+@media screen and (max-width: 1030px) {
+    #mySettings {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #mySettings {
+        width: 80%;
+        min-height: auto;
+    }
+    .mySettingsMain {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #mySettings {
+        width: 90%;
+    }
+}
+
+#mySettingsHeader {
+    height: 25px;
+    cursor: move;
+}
+
+#mySettings i,
+#mySettings p {
+    display: inline-flex;
+    margin: auto;
+    color: #fff;
+    padding: 5px;
+    background: transparent;
+}
+
+#mySettings select {
+    margin-top: 1rem;
+    width: auto;
+    max-width: 310px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--select-bg) !important;
+    border: var(--border);
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#mySettingsCloseBtn {
+    /* top right bottom left */
+    /* margin: 10px 0px 0px 10px; */
+    font-size: 1.4rem;
+    float: right;
+}
+
+#mySettings button {
+    border-radius: 5px;
+}
+
+#myProfileAvatar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.title {
+    display: inline-flex;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    text-align: left;
+    color: white;
+}
+
+#recImage {
+    width: 128px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#recImage:hover {
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Settings Table
+--------------------------------------------------------------*/
+
+.settingsTable {
+    width: 100%;
+    color: #fff;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+.settingsTable td,
+th {
+    text-align: left;
+    padding: 5px;
+    /* border: 1px solid grey; */
+}
+.settingsTable tr:nth-child(even) {
+    /* background-color: #121212; */
+}
+.settingsTable i {
+    border: none;
+    border-radius: 5px;
+}
+.custom-width {
+    width: 140px;
+}
+.width-150 {
+    width: 150px;
+}
+
+.microphone-table-width {
+    width: 180px;
+}
+.dropdown-menu {
+    background: var(--body-bg);
+}
+
+/*--------------------------------------------------------------
+# Style the tab
+--------------------------------------------------------------*/
+
+.tab {
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 35%;
+    background-color: var(--body-bg);
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    border-right: var(--border);
+}
+
+.tabActions {
+    position: relative;
+    width: 65%;
+    background-color: var(--body-bg);
+    min-height: 480px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 830px) {
+    .tab {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        border-right: none !important;
+    }
+    .tabActions {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .tabButtonText {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .tab {
+        display: inline;
+    }
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    margin: 3px;
+    padding: 11px;
+    float: left;
+    text-align: left;
+    color: #fff;
+    border: var(--border);
+    background-color: rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: transparent;
+    transform: scale(0.95);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--tab-btn-active);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent button i {
+    padding: 10px;
+    border: var(--border);
+    border-radius: 5px;
+}
+
+.tabcontent button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.tabcontent button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+}
+
+/* on open display devices tab */
+#tabRoom {
+    display: block;
+}
+
+.mod-title {
+    margin-top: 5px;
+    color: grey;
+}
+
+/*--------------------------------------------------------------
+# Settings - data time picker
+--------------------------------------------------------------*/
+
+#datetimePicker {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Settings - microphone volume indicator
+--------------------------------------------------------------*/
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--body-bg);
+    border-radius: 8px;
+}
+
+.volume-bar {
+    flex: 1;
+    height: 5px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    background-color: #3498db;
+}
+
+.inactive {
+    background-color: #ddd;
+}
+
+/*--------------------------------------------------------------
+# Settings Room Lobby
+--------------------------------------------------------------*/
+
+#lobby {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Transcription Room
+--------------------------------------------------------------*/
+
+.transcription-room {
+    z-index: 5;
+    display: none;
+    position: fixed;
+    height: var(--transcription-height);
+    width: var(--transcription-width);
+    min-height: var(--transcription-height);
+    min-width: var(--transcription-width);
+    background: var(--transcription-bg);
+    border: var(--border);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    resize: both;
+    overflow: hidden;
+}
+
+.transcription {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background: var(--transcription-bg);
+}
+
+/*--------------------------------------------------------------
+#  Transcription room header
+--------------------------------------------------------------*/
+
+.transcription-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #666;
+    cursor: move;
+}
+
+.transcription-header-title button,
+.transcription-header-options button {
+    border: none;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.23s;
+}
+
+/*--------------------------------------------------------------
+# Transcription room output area
+--------------------------------------------------------------*/
+
+.transcription-chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background: var(--transcription-bg);
+    max-width: 100%;
+}
+
+.transcription-chat::-webkit-scrollbar {
+    width: 5px;
+}
+.transcription-chat::-webkit-scrollbar-track {
+    background: transparent;
+}
+.transcription-chat::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/*--------------------------------------------------------------
+# Transcription room left side msg
+--------------------------------------------------------------*/
+
+.msg-transcription {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.left-msg-transcription .msg-transcription-bubble {
+    background: var(--left-msg-bg);
+    border-bottom-left-radius: 0;
+    color: #fff;
+    width: var(--msger-bubble-width);
+}
+
+.left-msg-transcription .msg-transcription-img {
+    margin: 0px 5px 5px 0px;
+}
+
+/*--------------------------------------------------------------
+# Transcription bubble text
+--------------------------------------------------------------*/
+
+.msg-transcription-bubble {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.msg-transcription-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.msg-transcription-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.msg-transcription-info-time {
+    font-size: 0.85em;
+}
+
+.msg-transcription-text {
+    display: inline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/*--------------------------------------------------------------
+# Transcription room input area
+--------------------------------------------------------------*/
+
+.transcription-inputarea {
+    display: inline-flex;
+    padding: 10px;
+    border: none;
+    border: var(--border);
+}
+
+.transcription-inputarea select {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Transcription room popup
+--------------------------------------------------------------*/
+
+.transcriptio-popup {
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Room/user emoji picker
+--------------------------------------------------------------*/
+
+.roomEmoji {
+    z-index: 9;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.userEmoji {
+    z-index: 9;
+    position: absolute;
+    left: 80px;
+    bottom: 60px;
+}
+
+.emojiPickerHeader {
+    display: flex;
+    justify-content: flex-start;
+    background: #151616;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: move;
+}
+
+#closeEmojiPickerContainer {
+    font-size: 1.3rem;
+}
+
+/*--------------------------------------------------------------
+# swal2
+--------------------------------------------------------------*/
+
+.swal2-validation-message,
+.swal2-title,
+.swal2-content,
+.swal2-input {
+    text-align: center;
+    color: #fff !important;
+    background-color: transparent !important;
+}
+.swal2-html-container {
+    text-align: center;
+    color: whitesmoke !important;
+    background-color: transparent !important;
+}
+
+.swal2-input {
+    border: var(--border) !important;
+    box-shadow: none !important;
+}
+
+.swal2-popup {
+    /* border: var(--border) !important; */
+    border: 0.5px solid rgb(255 255 255 / 32%) !important;
+}
+
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+}
+
+.swal2-timer-progress-bar-container {
+    background: #376df9;
+}
+
+.img-about {
+    margin: 0 !important;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+#about {
+    cursor: default;
+}
+
+#about b {
+    color: rgb(0, 180, 50);
+}
+
+#about img {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#about a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#about a:hover {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+#about button {
+    border: none;
+    width: 170px;
+    height: 40px;
+    font-size: 1.2rem;
+    background: linear-gradient(100deg, #376df9 0, #4b4547 75%, #222222 100%);
+    box-shadow: 0 0 6px 0 rgb(251 255 0 / 82%);
+    color: #ffffff;
+    transition: background 0.23s;
+    cursor: pointer;
+}
+
+#about button:hover {
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Common
+--------------------------------------------------------------*/
+
+select {
+    height: 40px;
+    line-height: 40px;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.fadein {
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+p,
+button {
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+button:hover {
+    color: grey;
+    transform: var(--btns-hover-scale);
+}
+
+.red {
+    color: red !important;
+}
+
+/*--------------------------------------------------------------
+# Lobby users list
+--------------------------------------------------------------*/
+
+#lobby {
+    z-index: 7;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    min-width: 320px;
+    background: var(--body-bg);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lobby-header {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: move;
+}
+
+#lobbyUsers {
+    max-height: 680px;
+    overflow: auto;
+}
+
+#lobbyUsers table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#lobbyUsers td,
+#lobbyUsers th {
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+}
+
+#lobbyUsers tr {
+    border-bottom: 1px solid #444444;
+}
+
+#lobbyUsers::-webkit-scrollbar {
+    width: 5px;
+}
+
+#lobbyUsers::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#lobbyUsers::-webkit-scrollbar-thumb {
+    background: #404040;
+}
+
+/*--------------------------------------------------------------
+# Send File
+--------------------------------------------------------------*/
+
+#sendFileDiv,
+#receiveFileDiv {
+    z-index: 8;
+    display: none;
+    padding: 20px;
+    margin: auto;
+    min-width: 320px;
+    background: var(--body-bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: #fff;
+    overflow: hidden;
+}
+
+#sendAbortBtn,
+#receiveHideBtn {
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background: transparent;
+}
+
+#sendAbortBtn:hover,
+#receiveHideBtn:hover {
+    color: rgb(255, 0, 0);
+    transform: var(--btns-hover-scale);
+    transition: all 0.3s ease-in-out;
+}
+
+progress {
+    width: 0;
+    min-width: 100%;
+}
+
+#imgShareSend:hover,
+#imgShareReceive:hover {
+    cursor: move;
+}
+
+/*--------------------------------------------------------------
+# Whiteboard
+--------------------------------------------------------------*/
+
+#whiteboard {
+    z-index: 4;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    width: var(--wb-width);
+    height: var(--wb-height);
+    background: var(--wb-bg);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.whiteboard-header {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: move;
+}
+
+.whiteboard-header-title {
+    display: flex;
+    align-items: center;
+}
+
+.whiteboard-header button {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    border: var(--border);
+}
+
+.whiteboardColorPicker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    width: 20px;
+    height: 15px;
+    margin: 2px;
+    border-radius: 20px;
+    border: solid 0.5px #afadad38;
+}
+.whiteboardColorPicker:hover {
+    transform: var(--btns-hover-scale);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.whiteboardColorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+.whiteboardColorPicker::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+.whiteboardColorPicker::-moz-color-swatch {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+.whiteboardColorPicker::-moz-color-swatch-wrapper {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+.whiteboardColorPicker::color-swatch {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+.whiteboardColorPicker::color-swatch-wrapper {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Video exit, pin/Unpin btn
+--------------------------------------------------------------*/
+
+#__pinUnpin,
+#__videoExit {
+    font-size: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Speech bar
+--------------------------------------------------------------*/
+
+.speechbar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.bar {
+    width: 6px;
+    border-radius: 6px;
+    background: rgba(#19bb5c, 0.65);
+    transition-property: height background-color;
+    transition-duration: 1s;
+}
+
+/*--------------------------------------------------------------
+# Webkit-Scrollbar Styles
+--------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--body-bg);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--body-bg);
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1b1f;
+}
+
+/*--------------------------------------------------------------
+# Pulse class effect
+--------------------------------------------------------------*/
+
+.pulsate {
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite;
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/*
+z-index:
+    - 1 videoMediaContainer
+    - 2 Video menu bar
+    - 3 control buttons
+    - 4 whiteboard
+    - 5 chat group
+    - 6 settings
+    - 7 participants/lobby
+    - 8 send receive progress
+    - 9 room/user emoji
+*/
