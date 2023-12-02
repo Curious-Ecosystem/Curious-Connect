@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+ 
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    height: 4rem;
+}
+ 
+.logo {
+    font-size: 2rem;
+}
+ 
+nav {
+    width: 30rem;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+nav ul li a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+ 
+nav ul li a:hover {
+    background-color: #0dac30;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reachUs-button {
+    padding: 1rem;
+    background-color: #0dac30;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reachUs-button:hover{
+    background-color: #1ac840;
+}
+ 
+/* banner section styles */
+.banner {
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+ 
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+/* Contact form styles */
+.contact-form {
+    padding: 40px 0;
+    margin: 0 10px;
+}
+ 
+.form-container {
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+.form-container label {
+    display:block;
+    font-weight: bold;
+}
+.form-container input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+.submit-button {
+    padding: 10px 20px;
+    background-color: #0dac30;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+ 
+/* Contact info styles */
+.contact-info {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f7f7f7;
+}
+ 
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+ 
+/* Footer styles */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+ 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+ 
+    .hamburger {
+        display: flex;
+    }
+ 
+    #nav-menu {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        display: none;
+    }
+ 
+    #nav-menu.active {
+        display: block;
+        flex-direction: row;
+        padding: 1rem;
+    }
+}
