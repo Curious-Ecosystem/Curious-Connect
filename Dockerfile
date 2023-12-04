@@ -6,6 +6,7 @@ WORKDIR /src
 ENV MEDIASOUP_SKIP_WORKER_PREBUILT_DOWNLOAD="true"
 
 COPY package.json .
+RUN npm install
 
 RUN \
     DEBIAN_FRONTEND=noninteractive apt-get update && \
