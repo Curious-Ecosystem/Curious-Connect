@@ -1,0 +1,20 @@
+{
+	"name": "Curious-Connect",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "CDCNaman:Curious-Ecosystem/Curious-Connect.git",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"frontend",
+		"services/*"
+	],
+	"scripts": {
+		"start": "yarn workspace frontend dev",
+		"auth": "yarn workspace Auth dev",
+		"meet": "yarn workspace Meeting dev",
+		"signal": "yarn workspace Signaling dev",
+		"media": "yarn workspace Media dev",
+		"install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
+	}
+}

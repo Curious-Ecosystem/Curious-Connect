@@ -1,0 +1,10 @@
+{
+  "name": "Signaling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "socket.io": "^4.7.5"
+  }
+}

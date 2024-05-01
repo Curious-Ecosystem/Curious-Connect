@@ -1,0 +1,21 @@
+# mac
+.DS_Store
+
+# git folder
+.git
+
+# npm
+node_modules
+npm-debug.log
+
+# package
+package-lock.json
+yarn.lock
+
+# cache
+.cache
+
+# personal
+# config.js
+# docker-compose.yml
+# docker-push.sh
