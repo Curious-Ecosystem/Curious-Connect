@@ -1,0 +1,19 @@
+{
+  "name": "Media",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "set MEDIASOUP_WORKER_BIN=./Worker/mediasoup-worker.exe && nodemon index.js"
+  },
+  "dependencies": {
+    "mediasoup-client": "^3.7.7",
+    "os": "^0.1.2"
+  },
+  "optionalDependencies": {
+    "mediasoup": "^3.14.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

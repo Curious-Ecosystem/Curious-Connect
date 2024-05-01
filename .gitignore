@@ -10,11 +10,12 @@ npm-debug.log
 
 # package
 package-lock.json
+yarn.lock
 
 # cache
 .cache
 
 # personal
-config.js
-docker-compose.yml
-docker-push.sh
+# config.js
+# docker-compose.yml
+# docker-push.sh

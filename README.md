@@ -1,2 +1,0 @@
-# Curious-Connect
-Explore Curious Connect, an innovative open-source initiative shaping the future of virtual communication. Utilizing HTML, CSS, JavaScript, and ReactJS alongside NodeJS and MongoDB, our platform offers a robust alternative to mainstream solutions like Google Meet and Zoom. Delve into advanced technologies including WebRTC, Mediasoup, and WebSocketIO, while leveraging Git/Gitflow for streamlined collaboration. Join our community, contribute your expertise, and be a part of redefining the landscape of virtual connectivity with Curious Connect. 
