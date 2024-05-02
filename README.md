@@ -26,6 +26,7 @@ Before you start contributing, please take a moment to read the following guidel
     - [Suggesting Enhancements](#suggesting-enhancements)
     - [Working on Issues](#working-on-issues)
     - [Submitting Pull Requests](#submitting-pull-requests)
+- [Project Documentation](docs/Overview.md)
 
 ## Getting Started
 
