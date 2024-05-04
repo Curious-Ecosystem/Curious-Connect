@@ -1,5 +1,5 @@
 {
-  "name": "Curious-Connect",
+  "name": "curious-connect",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "CDCNaman:Curious-Ecosystem/Curious-Connect.git",
@@ -18,3 +18,4 @@
     "install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
   }
 }
+
