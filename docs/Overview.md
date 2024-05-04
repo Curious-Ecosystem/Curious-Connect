@@ -29,8 +29,9 @@ React.js, Redux Toolkit, Tailwind CSS, WebRTC for real-time communication, and e
 
 Our goal at Curious Connect is to enhance the video conferencing experience by continuously improving features, enhancing security measures, and providing excellent user support. We are committed to fostering seamless collaboration and learning opportunities through our platform.
 
+#
 <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-  <a >< Previous</a>
+  <a href="./Overview.md">< Previous</a>
   <a href="../README.md" style="margin: 0 auto;">Home</a>
   <a href="./Architecture.md">Next ></a>
 </div>
