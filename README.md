@@ -26,7 +26,8 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 - Fork the repository on GitHub.
 - Clone your forked repository locally: `git clone https://github.com/Curious-Ecosystem/Curious-Connect.git`
 - Change your directory to the project: `cd CURIOUS-CONNECT`
-- For more information Follow [Project Setup](docs/Project_Setup.md)
+- For more information Follow [Project Setup](docs/Project_Setup.md) and our [Documentation](docs/Overview.md)
+
 
 ## How Can I Contribute?
 
@@ -39,12 +40,16 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 
 ## Code of Conduct
 
-Please review our [Code of Conduct](link) and adhere to our contribution guidelines:
+Please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and adhere to our contribution guidelines:
 
 - Follow code formatting and documentation standards.
 - Write clear and concise commit messages.
-- Include tests for new features and bug fixes.
 
+## License
+
+This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
+
+##
 We appreciate your contributions and look forward to collaborating with you!
 
 Thank you for contributing to our project! 🚀
