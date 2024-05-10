@@ -81,8 +81,14 @@ For any inquiries, concerns, or reporting of Code of Conduct violations, please 
 - Nandan GN: nandan@curiousdevelopers.in
 - Naman Malik: naman@curiousdevelopers.in
 - Kohinnor: kohinoor@curiousdevelopers.in
-- Usha Rani: usha@curiousdevelopers.in
-- Harshit : 
+- Harshit : harshit@curiousdevelopers.in
+- Surya - surya@curiousdevelopers.in
+- Sheetal - sheetal@curiousdevelopers.in
+- Aman Gupta - aman@curiousdevelopers.in
+- Dhruv - dhruv@curiousdevelopers.in
+- Rishabh - rishabh@curiousdevelopers.in
+- Rohit Sharma - rohitsharma@curiousdevelopers.in
+- Janhavi Chauhan - janhavi@curiousdevelopers.in
 
 
 ## 11. License and attribution
