@@ -32,7 +32,7 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 ## How Can I Contribute?
 
 ### Team Onboarding
-- Developers needs to onboard to opensource community for easy information flow along with admins, please join with this link  [Curious Developers Community - GSSoC ](https://chat.whatsapp.com/FR0sVnpsSvL4J4l56vLdBN)</br>
+- Developers need to onboard to the opensource community for easy information flow along with admins, please join with this link  [Curious Developers Community - GSSoC ](https://chat.whatsapp.com/FR0sVnpsSvL4J4l56vLdBN)</br>
 
 ### Contributing Guidelines
 
