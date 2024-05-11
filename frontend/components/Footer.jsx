@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bottom-0 lg:m-5 lg:ml-5 md:m-2 sm:ml-0 sm:m-2 w-[100%] fixed">
+    <div className="bottom-0 lg:m-5 lg:ml-5 md:m-5 sm:ml-0 sm:m-2 w-[100%] fixed">
       <div className="flex gap-5 justify-between max-md:flex-wrap">
         <div className="flex flex-col px-5 text-xs font-bold uppercase text-zinc-500">
           <img
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-4 text-[#7E7E7E] max-md:text-center max-sm:mb-4">
+      <div className="mt-4 text-[#7E7E7E] max-md:text-center max-md:mb-4">
         © 2024 CURIOUS CONNECT, all rights reserved
       </div>
     </div>
