@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
+import { FaGithub } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 
-const New = ({ name, mouseCoords, Id, animationDelay }) => {
+const New = ({ name, mouseCoords, links, url, role, animationDelay }) => {
   const eid = useRef();
   const ref = useRef();
   const [onDiv, setOnDiv] = useState(false);
@@ -12,18 +15,31 @@ const New = ({ name, mouseCoords, Id, animationDelay }) => {
     >
       <div
         ref={ref}
-        className="w-16 h-16 rounded-full bg-cover bg-center"
+        className="w-24 h-24 rounded-full bg-cover bg-center bg-red-400"
         style={{
-          backgroundImage: `url(${name})`,
+          backgroundImage: `url(${url})`,
           animationDelay: `${animationDelay}s !important`,
-          filter: !(onDiv || (mouseCoords.x === 0 && mouseCoords.y === 0))
-            ? "grayscale(100%)"
-            : "grayscale(0%)",
         }}
         onMouseOver={() => setOnDiv(true)}
         onMouseLeave={() => setOnDiv(false)}
-        data-title={Id}
+        data-title={name}
       ></div>
+
+      <div className="flex flex-col items-center py-2 text-gray-700 gap-1">
+        <p className="font-bold text-lg">{name}</p>
+        <p>{role}</p>
+        <div className="flex gap-2">
+          <a href={links.facebook}>
+            <FaFacebook />
+          </a>
+          <a href={links.linkedin}>
+            <FaLinkedin />
+          </a>
+          <a href={links.github}>
+            <FaGithub />{" "}
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
