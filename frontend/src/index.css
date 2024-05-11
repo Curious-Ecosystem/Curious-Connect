@@ -1,3 +1,164 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.App {
+  text-align: center;
+  height: "100%";
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.eid {
+  /* background-image: "url(/Yash/front.jpeg)"; */
+  margin: 18px;
+}
+.btnDiv {
+  display: flex;
+  justify-content: center;
+}
+.the-team {
+  height: 790px;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  position: absolute;
+  opacity: 0;
+  z-index: 9;
+  width: 8.33333%;
+  padding: 0 0.625em 1.25em;
+  display: inline;
+  height: auto;
+  float: left;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.visible-member {
+  position: relative;
+  opacity: 1;
+  top: 0 !important;
+  left: 0 !important;
+}
+.eye {
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  background-size: 660px 6300px;
+  /* background-image: url(/public/team.jpg); */
+  margin: 0 auto;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.tooltip-title {
+  font-size: 11px;
+  position: absolute;
+  white-space: nowrap;
+  top: auto;
+  background: #34aadc;
+  color: #fff;
+  display: none;
+  padding: 3px 10px;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.smooth-fade-in {
+  -webkit-animation-name: fadeDown;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-name: fadeDown;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.team-title {
+  margin: 0 0 20px 0;
+  font-size: 56px;
+  line-height: 65px;
+  font-weight: 100;
+  color: #1b1c2b;
+}
+.small {
+  font-size: 40px;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background: #34aadc;
+  color: #fff;
+  font-size: 80%;
+  position: absolute;
+  padding: 1px 5px 2px 5px;
+  bottom: -1.6em;
+  left: 100%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #222222;
+  z-index: 99999;
+  visibility: hidden;
+}
+[data-title] {
+  position: relative;
+}
