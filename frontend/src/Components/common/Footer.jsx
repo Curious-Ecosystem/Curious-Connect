@@ -8,7 +8,7 @@ import Google from '../../assets/Footer-Assets/Google.png'
 const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <div className='flex justify-between px-10 py-8' style={{ backgroundColor: '#000000' }}>
+    <div className='flex justify-between px-10 py-8 font-mono bg-zinc-800'>
       <div>
         <img src={Logo} alt="Logo" />
         <div className='pt-2'>
