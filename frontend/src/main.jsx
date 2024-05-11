@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import JoinRoomComponent from './joinRoom.jsx'
+import JoinRoom from './JoinRoom.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <JoinRoomComponent/>
+    <JoinRoom />
   </React.StrictMode>,
 )
