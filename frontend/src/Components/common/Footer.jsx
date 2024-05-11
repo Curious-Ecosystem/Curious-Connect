@@ -12,20 +12,20 @@ const Footer = () => {
       <div>
         <img src={Logo} alt="Logo" />
         <div className='pt-2'>
-          <p className='text-slate-400'>&copy; {year} CURIOUS CONNECT, ALL RIGHTS RESERVED.</p>
+          <p className='text-slate-400 text-xs md:text-lg'>&copy; {year} CURIOUS CONNECT, ALL RIGHTS RESERVED.</p>
         </div>
       </div>
-      <div className='flex gap-3'>
-        <div className='cursor-pointer'>
+      <div className='gap-3 sm:flex'>
+        <div className='cursor-pointer p-2 sm:p-0'>
           <img src={Discord} alt="Discord" />
         </div>
-        <div className='cursor-pointer'>
+        <div className='cursor-pointer p-2 sm:p-0'>
           <img src={Facebook} alt="Facebook" />
         </div>
-        <div className='cursor-pointer'>
+        <div className='cursor-pointer p-2 sm:p-0'>
           <img src={Youtube} alt="Youtube" />
         </div>
-        <div className='cursor-pointer'>
+        <div className='cursor-pointer p-2 sm:p-0'>
           <img src={Google} alt="Google" />
         </div>
       </div>
