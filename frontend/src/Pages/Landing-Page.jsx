@@ -13,7 +13,10 @@ export const LandingPage = () => {
 			<JoinRoom />
 			<MeetingCards />
 			<Feature />
+
+			{/* Cards of our team members */}
 			<OurTeam />
+			
 			<Footer/>
 		</div>
 	);
