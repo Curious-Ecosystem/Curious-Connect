@@ -7,14 +7,14 @@ import OurTeam from "../Components/Pages/Landing-Page/OurTeam";
 import Footer from "../Components/common/Footer";
 
 export const LandingPage = () => {
-	return (
-		<div>
-			<LandingHeader />
-			<JoinRoom />
-			<MeetingCards />
-			<Feature />
-			<OurTeam />
-			<Footer/>
-		</div>
-	);
+  return (
+    <div>
+      <LandingHeader />
+      <JoinRoom />
+      <MeetingCards />
+      <Feature />
+      <OurTeam />
+      <Footer />
+    </div>
+  );
 };

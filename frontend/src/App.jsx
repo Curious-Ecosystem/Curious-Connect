@@ -2,11 +2,11 @@ import React from "react";
 import { LandingPage } from "./Pages/Landing-Page";
 
 const App = () => {
-	return (
-		<>
-         <LandingPage/>
-		</>
-	);
+  return (
+    <div className="bg-gradient">
+      <LandingPage />
+    </div>
+  );
 };
 
 export default App;
