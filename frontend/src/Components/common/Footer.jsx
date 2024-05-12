@@ -4,8 +4,8 @@ import Logo from '../../assets/OurTeam-Assets/CDC.jpg'
 const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <div className='flex flex-col lg:flex-row justify-between px-10 py-8 bg-zinc-800 text-white'>
-      <div className='flex flex-col mx-auto'>
+    <div className='flex flex-col lg:flex-row justify-between px-10 py-8 bg-gradient text-white'>
+      <div className='flex flex-col mx-auto lg:mx-0'>
         <div className='flex gap-7 mb-7'>
           <img src={Logo} alt="Logo" className='h-24 w-24 rounded-full' />
           <div className='w-34 h-24 flex items-center text-xl font-bold'>
@@ -21,7 +21,7 @@ const Footer = () => {
           <button className='p-3 font-bold bg-blue-500 rounded-xl hover:scale-105 transition-scale duration-300'>Subscribe</button>
         </div>
       </div>
-      <div className='flex flex-row gap-4 sm:gap-0 justify-evenly'>
+      <div className='flex flex-row gap-4 sm:gap-20 justify-evenly'>
         <div className='mt-6'>
           <h1 className='font-bold text-lg mb-4 hover:text-cyan-500 hover:scale-101 transition-scale duration-300'>EXPLORE</h1>
           <h1 className='mb-3 hover:text-blue-500 cursor-pointer'>Webinars</h1>
@@ -37,7 +37,7 @@ const Footer = () => {
           <h1 className='mb-3 hover:text-blue-500 cursor-pointer'>FAQ</h1>
         </div>
       </div>
-      <div className='flex flex-row gap-4 sm:gap-0 justify-evenly ml-14'>
+      <div className='flex flex-row gap-4 sm:gap-16 justify-evenly ml-12 mr-2'>
         <div className='mt-6'>
           <h1 className='font-bold text-lg mb-4 hover:text-cyan-500 hover:scale-101 transition-scale duration-300'>LEGAL</h1>
           <h1 className='mb-3 hover:text-blue-500 cursor-pointer'>Privacy Policy</h1>
