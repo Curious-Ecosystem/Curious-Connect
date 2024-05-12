@@ -16,6 +16,10 @@
     "signal": "yarn workspace Signaling dev",
     "media": "yarn workspace Media dev",
     "install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.4"
   }
 }
-
