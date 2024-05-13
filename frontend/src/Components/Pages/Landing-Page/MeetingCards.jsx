@@ -27,7 +27,7 @@ const MeetingCards = () => {
         <MeetingCard
           style={{ backgroundColor: "#7c0dec" }}
           icon={<SlCalender />}
-          cardHeading="SCHEDULE MEETING MEETING"
+          cardHeading="SCHEDULE MEETING"
           cardDesc="PLAN YOUR MEETING"
         />
         <MeetingCard
