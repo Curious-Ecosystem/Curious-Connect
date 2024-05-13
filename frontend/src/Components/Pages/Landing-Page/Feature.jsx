@@ -22,7 +22,6 @@ const featuresData = [
     description: "Enjoy seamless collaboration without compromising on privacy or security concerns"
   }
 ];
-
 const Feature = () => {
   return (
     <div className="w-full h-full text-cyan-50 text-2xl text-center p-10 md:p-25 mt-10">
