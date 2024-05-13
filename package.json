@@ -23,6 +23,8 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
     "bcrypt": "^5.1.1",
+    "fa-icons": "^0.2.0",
+    "font-awesome-icons": "^1.6.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "react-router-dom": "^6.23.1"
