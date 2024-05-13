@@ -1,6 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="flex md:flex-wrap lg:flex-nowrap gap-5 items-start px-7 pt-10 pb-6 max-md:flex-wrap max-md:px-5">
       <div className="flex flex-col">
@@ -55,17 +63,21 @@ const Footer = () => {
       <div className="pr-16 mt-3.5 text-[20px] font-normal tracking-wide leading-10 text-white max-sm:pr-9">
         <span className="text-white font-bold hover:text-[#408ACD]">ABOUT</span>
         <br />
-        <a href="" className="text-white hover:text-[#408ACD]">
-          About us
-        </a>
-        <br />
-        <a href="" className="text-white hover:text-[#408ACD]">
-          Contact Us
-        </a>
-        <br />
-        <a href="" className="text-white hover:text-[#408ACD]">
-          FAQ
-        </a>
+
+        <div>
+          <Link to="/aboutUs" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+            About
+          </Link>
+          <br />
+          <Link to="/contactUs" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+            Contact Us
+          </Link>
+          <br />
+          <Link to="/faq" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+            FAQ
+          </Link>
+        </div>
+
       </div>
       <div className="mt-3.5 lg:mr-10 text-[20px] font-normal tracking-wide leading-10 text-white">
         <span className="font-bold hover:text-[#408ACD]">LEGAL</span>
