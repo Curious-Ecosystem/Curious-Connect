@@ -10,9 +10,8 @@ export const LandingPage = () => {
   return (
     <div>
       <HeroSection />
-      <FeatureCardSection />
       <MeetingCards />
-      <HeroSection />
+      <FeatureCardSection />
       <OurTeam />
     </div>
   );
