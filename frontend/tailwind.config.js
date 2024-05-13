@@ -3,6 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors:{      
+          orange:'#ff742e',
+          skyBlue:'#0d70e9',
+          purple:'#7c0dec',
+          yellow :'#e59c0d',  
+      },
       screens: {
         sm: "640px",
         md: "768px",
@@ -23,6 +29,8 @@ export default {
         primary: "#1F2329", // Use this for primary background color
         // Add more custom background colors here if needed
       }),
+     
+        
     },
   },
   plugins: [],
