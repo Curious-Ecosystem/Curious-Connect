@@ -44,24 +44,24 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex-auto mt-3.5 lg:pl-8 text-[20px] font-normal  tracking-wide leading-10 text-white">
-        <span className="font-bold hover:text-[#408ACD]">EXPLORE</span>
+        <span className="font-bold hover:text-[#408ACD] pointer-events-none">EXPLORE</span>
         <br />
-        <span className="text-white hover:text-[#408ACD]">Webinars</span>
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">Webinars</span >
         <br />
-        <span className="text-white hover:text-[#408ACD]">Events</span>
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">Events</span>
         <br />
-        <span className="text-white hover:text-[#408ACD]">Resources</span>
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">Resources</span>
         <br />
-        <span className="text-white hover:text-[#408ACD]">
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">
           Remote Team Interaction
         </span>
         <br />
-        <span className="text-white hover:text-[#408ACD]">
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">
           One-on-One Live Session
         </span>
       </div>
       <div className="pr-16 mt-3.5 text-[20px] font-normal tracking-wide leading-10 text-white max-sm:pr-9">
-        <span className="text-white font-bold hover:text-[#408ACD]">ABOUT</span>
+        <span className="text-white font-bold hover:text-[#408ACD] pointer-events-none" >ABOUT</span>
         <br />
 
         <div>
@@ -80,27 +80,27 @@ const Footer = () => {
 
       </div>
       <div className="mt-3.5 lg:mr-10 text-[20px] font-normal tracking-wide leading-10 text-white">
-        <span className="font-bold hover:text-[#408ACD]">LEGAL</span>
+        <span className="font-bold hover:text-[#408ACD] pointer-events-none">LEGAL</span>
         <br />
-        <a href="#" className="text-white hover:text-[#408ACD]">
+        <Link to="/PrivacyPolicyPage" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
           Privacy Policy
-        </a>
+        </Link>
         <br />
-        <a href="#" className="text-white hover:text-[#408ACD]">
+        <Link to="/termsOfService" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
           Terms Of Service
-        </a>
+        </Link>
       </div>
       <div className="flex flex-col mt-3 font-normal">
         <div className="text-[20px] tracking-wide leading-10 text-white">
-          <span className="text-bold hover:text-[#408ACD]">COLLABORATION</span>
+          <span className="font-bold hover:text-[#408ACD] pointer-events-none">COLLABORATION</span>
           <br />
-          <span className="text-white hover:text-[#408ACD]">
+          <span className="text-white hover:text-[#408ACD] cursor-pointer">
             Virtual Team Interaction
           </span>
           <br />
-          <span className="text-white hover:text-[#408ACD]">Webinar</span>
+          <span className="text-white hover:text-[#408ACD] cursor-pointer ">Webinar</span>
           <br />
-          <span className="text-white hover:text-[#408ACD]">
+          <span className="text-white hover:text-[#408ACD] cursor-pointer">
             Virtual Meetings
           </span>
         </div>
