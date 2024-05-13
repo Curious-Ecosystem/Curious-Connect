@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+     
       screens: {
         sm: "640px",
         md: "768px",
@@ -23,6 +24,8 @@ export default {
         primary: "#1F2329", // Use this for primary background color
         // Add more custom background colors here if needed
       }),
+     
+        
     },
   },
   plugins: [],
