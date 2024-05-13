@@ -1,50 +1,54 @@
 import React from "react";
-import AddIcon from "@mui/icons-material/Add";
-import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
-import TodayOutlinedIcon from "@mui/icons-material/TodayOutlined";
-import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
+import { FaPlus } from "react-icons/fa";
+import { FaUserPlus } from "react-icons/fa6";
+import { SlCalender } from "react-icons/sl";
+import { IoMdVideocam } from "react-icons/io";
+import { IconContext } from "react-icons";
 
 const MeetingCards = () => {
   return (
-    <div
-      className="flex  flex-wrap gap-0 justify-center w-full  text-cyan-50 text-2xl text-center
-  "
-    >
-      <MeetingCard
-        className="bg-orange"
-        icon={<AddIcon sx={{ fontSize: "4rem" }} />}
-        cardHeading="INSTANT MEETING"
-        cardDesc="START AN INSTANT MEETING"
-      />
-      <MeetingCard
-        className="bg-skyBlue"
-        icon={<PersonAddAltOutlinedIcon sx={{ fontSize: "4rem" }} />}
-        cardHeading="UPCOMING MEETING"
-        cardDesc="VIA INVITATION LINK"
-      />
-      <MeetingCard
-        className="bg-purple"
-        icon={<TodayOutlinedIcon sx={{ fontSize: "4rem" }} />}
-        cardHeading="SCHEDULE MEETING MEETING"
-        cardDesc="PLAN YOUR MEETING"
-      />
-      <MeetingCard
-        className="bg-yellow"
-        icon={<VideocamOutlinedIcon sx={{ fontSize: "4rem" }} />}
-        cardHeading="VIEW STREAMS"
-        cardDesc="VIEW STREAMS ON OUR EVENT PAGE"
-      />
+    <div className="flex  flex-wrap gap-0 justify-center w-full  text-cyan-50 text-2xl text-center">
+      <IconContext.Provider
+        value={{ size: "3em", className: "global-class-name" }}
+      >
+        <MeetingCard
+          style={{ backgroundColor: "#ff742e" }}
+          icon={<FaPlus />}
+          cardHeading="INSTANT MEETING"
+          cardDesc="START AN INSTANT MEETING"
+        />
+
+        <MeetingCard
+          style={{ backgroundColor: "#0E78F9" }}
+          icon={<FaUserPlus />}
+          cardHeading="UPCOMING MEETING"
+          cardDesc="VIA INVITATION LINK"
+        />
+        <MeetingCard
+          style={{ backgroundColor: "#7c0dec" }}
+          icon={<SlCalender />}
+          cardHeading="SCHEDULE MEETING"
+          cardDesc="PLAN YOUR MEETING"
+        />
+        <MeetingCard
+          style={{ backgroundColor: "#e59c0d" }}
+          icon={<IoMdVideocam />}
+          cardHeading="VIEW STREAMS"
+          cardDesc="VIEW STREAMS ON OUR EVENT PAGE"
+        />
+      </IconContext.Provider>
     </div>
   );
 };
 
 export default MeetingCards;
 
-const MeetingCard = ({ icon, className, cardHeading, cardDesc }) => {
+const MeetingCard = ({ style, icon, cardHeading, cardDesc }) => {
   return (
     <>
       <div
-        className={`flex  flex-col justify-between pr-6 items-start ${className} w-52 pb-10 m-2  rounded-lg h-60`}
+        style={style}
+        className="flex flex-col justify-between pr-6 items-start  w-52 pb-10 m-2  rounded-lg h-60"
       >
         <p className=" text-left  text-base  pl-2 pt-3">{icon}</p>
         <div>
