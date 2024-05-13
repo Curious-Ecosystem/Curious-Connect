@@ -1,5 +1,4 @@
 import React from "react";
-import { RiRestartFill } from '@remixicon/react';
 
 import { RiPhoneFill } from "@remixicon/react";
 import { RiMic2Fill } from "@remixicon/react";
@@ -7,7 +6,7 @@ import { RiVideoAddFill } from "@remixicon/react";
 
 const Header = () => {
   return (
-    <div className="w-full bg-[#1e228] h-screen text-cyan-50 text-2xl text-center">
+    <div className="w-full bg-[#1e228] h-[85vh] text-cyan-50 text-2xl text-center">
       <div className="top flex w-full h-[90vh] pl">
         <div className="left  h-full flex flex-col  justify-center w-[48%] leading-[4.2vw] text-left pl-8">
           <h2 className="text-[4vw] font-semibold tracking-tight leading-[3vw]">CONNECT</h2>
@@ -50,14 +49,14 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="bottom mt-[-2vw] h-[10vh] w-full px-32 ">
+      {/* <div className="bottom mt-[-2vw] h-[10vh] w-full px-32 ">
         <div className="paste h-full w-full flex justify-between py-5 bg-[#15181d] rounded-md">
           <h1 className="font-semibold text-[1.6vw] tracking-tighter pl-5">PASTE THE MEETING CODE</h1>
           <h2 className="font-[400] text-[1.6vw] tracking-tighter px-2 pt-1 pb-9  rounded-lg bg-[#242830] ">11111CURIOUSCONNECT</h2>
           <button className="font-[400] text-[1.6vw] tracking-tighter px-4 pt-1 pb-9  rounded-lg bg-sky-500 ">JOIN ROOM</button>
           <RiRestartFill size={36} className="bg-sky-500 rounded-md  mr-4" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
