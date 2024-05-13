@@ -1,10 +1,10 @@
 import React from "react";
 import { LandingPage } from "./Pages/Landing-Page";
-import AboutPage from "./Pages/Footer/AboutPage";
-import Contact from "./Pages/Footer/Contact";
-import FAQ from "./Pages/Footer/FAQ";
+import AboutPage from "./Components/common/AboutSection/AboutPage";
+import Contact from "./Components/common/AboutSection/Contact";
+import FAQ from "./Components/common/AboutSection/FAQ";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from "./Pages/Footer/Footer";
+import Footer from "./Components/common/Footer";
 
 const App = () => {
   return (
