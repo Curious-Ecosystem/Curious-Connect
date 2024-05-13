@@ -3,28 +3,29 @@ import React from "react";
 const Header = () => {
   return (
     <div className="w-full h-full text-cyan-50 text-2xl text-center">
-       <header>
-    <nav>
-      <ul>
-        <li><a href="app.jsx">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <h1 class="logo">mbe-dev</h1>
-    </nav>
-  </header>
+
   <main>
     <div class="container">
-      <img src="res-img.png" alt=""/>
+      <img src="meeting.png" alt=""/>
       <div class="hero-text">
-        <h1>Your perfect coffee experience</h1>
-        <p>Indulge in artisanal coffee delights. Crafted with passion, brewed with perfection.
-          Savor the Flavor!
+     <h1>CONNECT</h1>
+        <h1> COLLABORATE </h1>
+        <h1>START CONFERENCE</h1>
+        <p>START YOUR NEXT VIDEO CALL WITH A SINGLE CLICK.
+          NO DOWNLOAD, PLUG-IN, OR LOGIN IS REQUIRED.
+          JUST GET STRAIGHT TO TALKING, MESSAGING, AND
+          SHARING YOUR SCREEN.
         </p>
-        <button>Order Now</button>
+        <button>SIGN IN</button>
+        <button>SIGN UP</button>
       </div>
+    
     </div>
   </main>
+<br/>
+<br/>  <div class="div"><button class="h1">PASTE THE MEETINO CODE</button>
+        <button class="h2"> 11111CURIOUSCONNECT</button><button>JOIN ROOM</button>
+        <button>🥨</button></div>
     </div>
   );
 };

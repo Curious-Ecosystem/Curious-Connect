@@ -1,6 +1,6 @@
-/*@tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities;*/
+@tailwind utilities;
 
 body{
     background-color: white;
@@ -12,37 +12,24 @@ body{
     text-decoration: none;
   }
   
-  .logo {
-    order: 1;
-    font-size: 2rem;
-    font-weight: 800;
+.div{
+  .h1{
+    background-color: gray;
+    box-shadow: 0em -0.2rem 0em gray;
   }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-    margin-left: 50px;
-    margin-right: 50px;
+  .h2{
+    background-color: rgb(75, 67, 67);
+    box-shadow: 0em -0.2rem 0em rgb(92, 89, 89); 
   }
+}
   
-  nav ul {
-    display: flex;
-    order: 2;
-  }
-  
-  nav ul a {
-    color: #161212;
-    font-size: 1.6rem;
-    margin-left: 2rem;
-  }
-  
+
   .container {
     height: 600px;
     padding: 20px;
     margin-left: 40px;
     margin-right: 40px;
+    
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -51,23 +38,36 @@ body{
   }
   
   .container img {
+    
     width: 100%;
-    height: 500px;
+    height: 400px;
   }
   
   .hero-text {
     width: 80%;
+    margin-top: 200px;
   }
+  .div{
+    background-color: grey;
+    border-radius: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
   
-  .hero-text h1 {
-    font-size: 3.3rem;
+    }
+  
+  
+  .hero-text  h1{
+   font-size: 60px;
+   font-weight: bold;
     margin-bottom: 12px;
-    color: #8b4513;
+    padding: 20px;
+    color: white;
   }
   
   .hero-text p {
     font-size: 1.4rem;
     margin-bottom: 12px;
+    color: gray;
   }
   
   button {
@@ -75,20 +75,21 @@ body{
     border-radius: 4px;
     margin: 8px;
     border: none;
-    background-color: #e2e273;
-    color: #000000;
+    background-color:blue;
+    color:white;
     font-weight: 800;
     font-size: 0.85em;
     text-transform: uppercase;
+    border-radius: 35px;
     text-align: center;
-    box-shadow: 0em -0.2rem 0em #e2e273 inset;
+    box-shadow: 0em -0.2rem 0em #0e3ce1 inset;
     transition: color 3s ease-in-out;
   }
   
   button:hover {
     background-color: transparent;
-    color: #8b4513;
-    border: 3px solid #e2e273;
+    color: #faf7f5;
+    border: 3px solid #620fde;
     cursor: pointer;
   }
   
