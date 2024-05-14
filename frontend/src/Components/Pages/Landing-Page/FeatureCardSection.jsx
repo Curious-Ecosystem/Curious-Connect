@@ -1,6 +1,12 @@
 import React from 'react';
 
+import ai from "../../../assets/Landing-Page-Assets/ai.png";
+import letter from "../../../assets/Landing-Page-Assets/letter.png";
+import encrypted from "../../../assets/Landing-Page-Assets/encrypted.png";
+import privacy from "../../../assets/Landing-Page-Assets/privacy.png";
+
 const featuresData = [
+<<<<<<< HEAD
   {
     icon: '../../../media/ai.png',
     title: 'AI Chatbot',
@@ -23,6 +29,30 @@ const featuresData = [
     description:
       'Enjoy seamless collaboration without compromising on privacy or security concerns',
   },
+=======
+	{
+		icon: ai,
+		title: "AI Chatbot",
+		description:
+			"Engage with our AI chatbot directly inside the meet and get your doubt clarified",
+	},
+	{
+		icon: letter,
+		title: "Interactive White Board",
+		description: "Have realistic interaction with interactive white board",
+	},
+	{
+		icon: encrypted,
+		title: "End to End Encryption",
+		description: "Enjoy seamless collaboration with end to end encryption",
+	},
+	{
+		icon: privacy,
+		title: "Privacy Protection",
+		description:
+			"Enjoy seamless collaboration without compromising on privacy or security concerns",
+	},
+>>>>>>> 7da9bc2f988e4b3b0598b4fa1ebd39920427706b
 ];
 const Feature = () => {
   return (
