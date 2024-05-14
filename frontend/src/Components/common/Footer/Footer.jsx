@@ -34,7 +34,7 @@ const Footer = () => {
           <input
             type="text"
             placeholder="Enter email.."
-            className="grow justify-center p-5 items-start w-[281.86px] h-[45.94px] text-[20px] leading-8 bg-[#FFFFFF] rounded-md text-black text-opacity-60 border-none max-md:pr-5"
+            className="grow justify-center p-5 items-start w-[281.86px] h-[45.94px] text-[16px] leading-8 bg-[#FFFFFF] rounded-md text-black text-opacity-60 border-none max-md:pr-5"
           ></input>
           <a href="#">
             <button className="justify-center text-lg w-[115.94px] h-[45.94px] font-semibold tracking-wide leading-5 text-white whitespace-nowrap hover:border-[1px] hover:bg-transparent cursor-pointer hover:border-[#408ACD] bg-[#408ACD] rounded-[10px]">
@@ -43,7 +43,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex-auto mt-3.5 lg:pl-8 text-[20px] font-normal  tracking-wide leading-10 text-white">
+      <div className="flex-auto mt-3.5 lg:pl-8 text-[16px] font-normal  tracking-wide leading-10 text-white">
         <span className="font-bold hover:text-[#408ACD] pointer-events-none">EXPLORE</span>
         <br />
         <span className="text-white hover:text-[#408ACD] cursor-pointer">Webinars</span >
@@ -60,7 +60,7 @@ const Footer = () => {
           One-on-One Live Session
         </span>
       </div>
-      <div className="pr-16 mt-3.5 text-[20px] font-normal tracking-wide leading-10 text-white max-sm:pr-9">
+      <div className="pr-16 mt-3.5 text-[16px] font-normal tracking-wide leading-10 text-white max-sm:pr-9">
         <span className="text-white font-bold hover:text-[#408ACD] pointer-events-none" >ABOUT</span>
         <br />
 
@@ -79,7 +79,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className="mt-3.5 lg:mr-10 text-[20px] font-normal tracking-wide leading-10 text-white">
+      <div className="mt-3.5 lg:mr-10 text-[16px] font-normal tracking-wide leading-10 text-white">
         <span className="font-bold hover:text-[#408ACD] pointer-events-none">LEGAL</span>
         <br />
         <Link to="/PrivacyPolicyPage" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
@@ -91,7 +91,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex flex-col mt-3 font-normal">
-        <div className="text-[20px] tracking-wide leading-10 text-white">
+        <div className="text-[16px] tracking-wide leading-10 text-white">
           <span className="font-bold hover:text-[#408ACD] pointer-events-none">COLLABORATION</span>
           <br />
           <span className="text-white hover:text-[#408ACD] cursor-pointer">

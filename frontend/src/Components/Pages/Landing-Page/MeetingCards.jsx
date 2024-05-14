@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { FaPlus } from "react-icons/fa";
-import { FaUserPlus } from "react-icons/fa6";
+import { FaUserPlus } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoMdVideocam } from "react-icons/io";
 import { IconContext } from "react-icons";
