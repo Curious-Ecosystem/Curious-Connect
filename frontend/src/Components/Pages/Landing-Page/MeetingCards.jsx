@@ -4,6 +4,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoMdVideocam } from "react-icons/io";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const MeetingCards = () => {
   return (
@@ -24,12 +25,16 @@ const MeetingCards = () => {
           cardHeading="UPCOMING MEETING"
           cardDesc="VIA INVITATION LINK"
         />
-        <MeetingCard
-          style={{ backgroundColor: "#7c0dec" }}
-          icon={<SlCalender />}
-          cardHeading="SCHEDULE MEETING"
-          cardDesc="PLAN YOUR MEETING"
-        />
+
+        <Link to="/createMeeting">
+          <MeetingCard
+            style={{ backgroundColor: "#7c0dec", cursor: "pointer" }}
+            icon={<SlCalender />}
+            cardHeading="SCHEDULE MEETING"
+            cardDesc="PLAN YOUR MEETING"
+          />
+        </Link>
+
         <MeetingCard
           style={{ backgroundColor: "#e59c0d" }}
           icon={<IoMdVideocam />}
