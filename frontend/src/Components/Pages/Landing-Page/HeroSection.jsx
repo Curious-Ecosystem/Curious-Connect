@@ -1,11 +1,22 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from "react";
 import img from "../../../assets/Landing-Page-Assets/home-r.png";
 
 import JoinWithCode from "./JoinWithCode";
+>>>>>>> 7da9bc2f988e4b3b0598b4fa1ebd39920427706b
 
 // Design Hero section here and call this hero section in "frontend/src/Pages/Landing-Page.jsx"
 
 const HeroSection = () => {
+<<<<<<< HEAD
+  return (
+    <div className="w-full h-full text-cyan-50 text-2xl text-center">
+      Hero Section
+    </div>
+  );
+=======
 	return (
 		<div className="justify-center items-center text-cyan-50 font-bold flex flex-col md:flex-row lg:p-20 gap-2">
 			<div className="w-full flex flex-col p-5 justify-center ">
@@ -51,6 +62,7 @@ const HeroSection = () => {
 			</div>
 		</div>
 	);
+>>>>>>> 7da9bc2f988e4b3b0598b4fa1ebd39920427706b
 };
 
 export default HeroSection;
