@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
@@ -44,16 +44,31 @@ const MeetingCards = () => {
 export default MeetingCards;
 
 const MeetingCard = ({ style, icon, cardHeading, cardDesc }) => {
+  const [hovered, setHovered] = useState(false);
   return (
     <>
       <div
         style={style}
-        className="flex flex-col justify-between pr-6 items-start  w-52 pb-10 m-2  rounded-lg h-60"
+        className={`flex flex-col justify-center  items-center  w-48  m-3  rounded-2xl h-48 transition duration-500 ease-in-out transform hover:scale-90 cursor-pointer ${
+          hovered ? "shadow-md" : style.backgroundColor
+        }`}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
-        <p className=" text-left  text-base  pl-2 pt-3">{icon}</p>
-        <div>
-          <p className="text-left text-base font-bold pl-5">{cardHeading}</p>
-          <p className="text-left font-thin text-base pl-5 font-">{cardDesc}</p>
+        <p
+          className={`text-center text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-200 ease-in-out ${
+            hovered ? "opacity-0" : "opacity-100"
+          } `}
+        >
+          {icon}
+        </p>
+        <div
+          className={`text-center  transition-opacity ease-in-out duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+            hovered ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className=" font-black text-xl mb-3">{cardHeading}</p>
+          <p className=" font-medium text-xs text-gray-200">{cardDesc}</p>
         </div>
       </div>
     </>
