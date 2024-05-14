@@ -13,6 +13,8 @@ export default {
       },
       backgroundImage: {
         gradient: "linear-gradient(243.43deg, #1F2329 0.37%, #1D2026 100%)",
+        gradient2: "linear-gradient(190.43deg, #0799C8 30%, #113F51 60%)",
+        gradient3: "linear-gradient(210.43deg, #0799C8 5%, #113F51 31%)",
       },
       backgroundSize: {
         auto: "auto",
@@ -24,6 +26,15 @@ export default {
         primary: "#1F2329", // Use this for primary background color
         // Add more custom background colors here if needed
       }),
+      rotate: {
+        '15': '15deg',
+        '30': '30deg',
+        '60': '60deg',
+        '145': '145deg',
+      },
+     colors:{
+      borderclr: "#408ACD",
+     } 
      
         
     },
