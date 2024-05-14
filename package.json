@@ -16,6 +16,7 @@
     "signal": "yarn workspace Signaling dev",
     "media": "yarn workspace Media dev",
     "install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
+
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -28,5 +29,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "react-router-dom": "^6.23.1"
+
   }
 }

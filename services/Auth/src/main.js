@@ -18,7 +18,7 @@ async function server() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  const authRoutes = require("../routes/auth.route");
+  const authRoutes = require("./routes/auth.route");
 
   // auth routes;
 
