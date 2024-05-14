@@ -4,9 +4,9 @@ const User = require("../models/user.model");
 const { errorHadnler } = require("../utils/error");
 
 async function signup(req, res) {
-  const { name, email, password } = req.body;
-
   try {
+    const { name, email, password } = req.body;
+    
     let user = await User.findOne({ email });
 
     console.log(user);
@@ -38,20 +38,20 @@ async function signup(req, res) {
 }
 
 async function signin(req, res, next) {
-  const { email, password } = req.body;
   try {
+  const { email, password } = req.body;
     let user = await User.findOne({ email });
     // console.log(user);
 
     // checking whether user exists or not;
 
-    if (!user) next(errorHadnler(404, "user not exisits"));
+    if (!user) res.json(errorHadnler(404, "User does not exists"));
 
     const isMatch = await bcrypt.compare(password, user.password);
 
     // if the password not matched;
 
-    if (!isMatch) next(errorHadnler(401, "Invalid password"));
+    if (!isMatch) res.json(errorHadnler(401, "Invalid password"));
 
     // generating jwt token;
 
