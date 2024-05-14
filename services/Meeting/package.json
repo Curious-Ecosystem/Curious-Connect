@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "dev": "nodemon index.js"
   }
 }
