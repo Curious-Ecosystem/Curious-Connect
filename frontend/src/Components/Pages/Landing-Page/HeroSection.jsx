@@ -48,13 +48,13 @@ const HeroSection = () => {
         </div>
 
         {/* image div */}
-        <div className="w-full flex justify-center p-5 object-contain h-[100%] bg-cover bg-[url('https://curious-connect.inspirationapp.org/assets/home-r-mxU6665b.png')]">
-		<svg width="229" height="249" viewBox="0 0 229 249" className="lg:top-0 absolute lg:block hidden z-0 mr-[40vw]" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="w-full flex justify-center p-5 object-contain ">
+		<svg width="229" height="249" viewBox="0 0 229 249" className="lg:top-0 absolute lg:block hidden z-0 mr-[41vw]" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3 1C62.0625 174.11 177.609 236.462 228 246" stroke="#408ACD" stroke-opacity="0.65" stroke-width="5"/>
 </svg>
-          {/* <img src={img} alt="home" className="w-[500px] mt-5 z-10" /> */}
+          <img src={img} alt="home" className="w-[520px] mt-5 z-10" />
           <div
-		   className="lg:w-[20vw] shadow-md shadow-black lg:top-1 w-[20vw] lg:h-[15vw] z-20 h-[100px] absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] lg:block hidden border-[#0D7A9F] border-[solid] ml-[25vw] opacity-50"
+		   className="lg:w-[20vw] shadow-md shadow-black lg:top-1 w-[20vw] lg:h-[15vw] z-0 h-[100px] absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] lg:block hidden border-[#0D7A9F] border-[solid] ml-[25vw] opacity-50"
             style={{background: "rgb(7,153,200)",
 background: "linear-gradient(216deg, rgba(7,153,200,1) 0%, rgba(17,63,81,0.3086484593837535) 91%)"}}
           ></div>
