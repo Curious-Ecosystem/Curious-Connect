@@ -18,4 +18,3 @@
     "install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
   }
 }
-
