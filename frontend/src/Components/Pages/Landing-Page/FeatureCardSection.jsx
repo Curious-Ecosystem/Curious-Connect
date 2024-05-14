@@ -26,8 +26,8 @@ const featuresData = [
 ];
 const Feature = () => {
 	return (
-		<div className="w-full h-full text-cyan-50 text-2xl text-center p-10 md:p-25 mt-10">
-			<h5 className="w-full h-full text-cyan-50 text-2xl text-white p-3 font-semibold text-center">
+		<div className="w-full h-full text-cyan-50 text-2xl text-center p-5 md:p-5 mt-5">
+			<h5 className="w-full h-full text-cyan-50 text-2xl  p-3 font-semibold text-center">
 				Curious Connect Unique Attributes
 			</h5>
 			<p className="text-lg font-normal text-gray-500 p-3">
