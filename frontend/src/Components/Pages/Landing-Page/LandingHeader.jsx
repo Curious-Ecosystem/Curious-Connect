@@ -26,6 +26,7 @@ const Header = () => {
 <input type="text" placeholder="Enter code"/>
 <button>Join Now🔄</button>
 </div>
+
     </div>
   );
 };
