@@ -2,121 +2,202 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: white;
+body {
+  margin: auto;
 }
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-.div{
-  .h1{
-    background-color: gray;
-    box-shadow: 0em -0.2rem 0em gray;
-  }
-  .h2{
-    background-color: rgb(75, 67, 67);
-    box-shadow: 0em -0.2rem 0em rgb(92, 89, 89); 
-  }
+.hero-text span{
+  background-color: #007bff;
+  border-radius: 10px;
 }
-  
 
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.hero-text p {
+  text-align: left;
+  font-weight: bold;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 40px;
+}
+
+.hero-text button {
+  margin-right: 80px;
+}
+input{
+  border-radius:20px ;
+  height: 70px;
+  background-color: rgb(32, 30, 30);
+  border: 2px solid;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.meet{
+  display: flex;
+  margin: 20px;
+  padding: 40px;
+}
+.meet h1{
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.meet button{
+  height: 70px;
+ margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* For screens larger than 1600px (large computer screens) */
+@media (min-width: 1600px) {
   .container {
-    height: 600px;
-    padding: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
   }
-  
+
   .container img {
-    
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 500px;
   }
-  
+
   .hero-text {
     width: 80%;
     margin-top: 200px;
   }
-  .div{
-    background-color: grey;
-    border-radius: 15px;
-    margin-left: 80px;
-    margin-right: 80px;
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+}
+
+/* For screens between 768px and 1024px (laptop) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container img {
+    max-height: 400px;
+  }
+
+  .hero-text {
+    margin-top: 150px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+}
+
+/* For screens between 480px and 767px (mobile) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .container img {
+    max-height: 300px;
+  }
+
+  .hero-text {
+    margin-top: 100px;
+  }
+
+.div {
+   .h2{
+    font-size: 20px;
+   }
+}
+  .hero-text h1 {
+    font-size: 35px;
+  }
+.meet h1{
+  padding-left:1px;
   
+
+}
+  input{
+    border-radius:20px ;
+    height: 70px;
+    background-color: rgb(32, 30, 30);
+    border: 2px solid;
+    text-align: left;
+    padding-left: 5px;
+    margin-top: 10px;
+    width: 150px;
+  }
+
+  .meet button{
+    height: 70px;
+   margin-bottom: 10px;
+   padding: 10px;
+  font-size: 15px;
+    border-radius: 20px;
+  }
+}
+
+/* For screens up to 479px (small mobile) */
+@media (max-width: 479px) {
+  .container img {
+    max-height: 250px;
+  }
+
+  .hero-text {
+    margin-top: 80px;
+  }
+  .div {
+    .h2{
+     font-size: 15px;
     }
-  
-  
-  .hero-text  h1{
-   font-size: 60px;
-   font-weight: bold;
-    margin-bottom: 12px;
-    padding: 20px;
-    color: white;
+}
+  .hero-text h1 {
+    font-size: 30px;
   }
-  
-  .hero-text p {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    color: gray;
-  }
-  
-  button {
-    padding: 1em 2.1em 1.1em;
-    border-radius: 4px;
-    margin: 8px;
-    border: none;
-    background-color:blue;
-    color:white;
-    font-weight: 800;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    border-radius: 35px;
+  .container h1,p,button,img{
     text-align: center;
-    box-shadow: 0em -0.2rem 0em #0e3ce1 inset;
-    transition: color 3s ease-in-out;
   }
+
   
-  button:hover {
-    background-color: transparent;
-    color: #faf7f5;
-    border: 3px solid #620fde;
-    cursor: pointer;
-  }
-  
-  /* Media queries */
-  
-  @media (max-width: 884px) {
-    .container {
-      margin-top: 10px;
-      flex-direction: column;
-    }
-    .hero-text {
-      width: 100%;
-      text-align: center;
-    }
-    .hero-text h1 {
-      font-size: 3rem;
-    }
-  }
-  
-  @media (max-width: 678px) {
-    .hero-text h1 {
-      font-size: 2rem;
-    }
-  }
-  @media (max-width: 428px) {
-    nav ul {
-      display: none;
-    }
-  }
-  
+}
+
+/* General styling */
+.div {
+  background-color: rgb(52, 51, 51);
+  border-radius: 15px;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+}

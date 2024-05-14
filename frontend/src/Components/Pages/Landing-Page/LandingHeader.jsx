@@ -10,7 +10,7 @@ const Header = () => {
       <div class="hero-text">
      <h1>CONNECT</h1>
         <h1> COLLABORATE </h1>
-        <h1>START CONFERENCE</h1>
+        <h1>START <span>CONFERENCE</span></h1>
         <p>START YOUR NEXT VIDEO CALL WITH A SINGLE CLICK.
           NO DOWNLOAD, PLUG-IN, OR LOGIN IS REQUIRED.
           JUST GET STRAIGHT TO TALKING, MESSAGING, AND
@@ -22,10 +22,10 @@ const Header = () => {
     
     </div>
   </main>
-<br/>
-<br/>  <div class="div"><button class="h1">PASTE THE MEETINO CODE</button>
-        <button class="h2"> 11111CURIOUSCONNECT</button><button>JOIN ROOM</button>
-        <button>🥨</button></div>
+<div class="meet"> <h1>Your Code Here</h1>
+<input type="text" placeholder="Enter code"/>
+<button>Join Now🔄</button>
+</div>
     </div>
   );
 };
