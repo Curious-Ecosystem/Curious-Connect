@@ -19,3 +19,4 @@ yarn.lock
 # config.js
 # docker-compose.yml
 # docker-push.sh
+.vercel
