@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js'
+  ],
+
   theme: {
     extend: {
-     
+
       screens: {
         sm: "640px",
         md: "768px",
@@ -26,18 +30,19 @@ export default {
         primary: "#1F2329", // Use this for primary background color
         // Add more custom background colors here if needed
       }),
+
       rotate: {
         '15': '15deg',
         '30': '30deg',
         '60': '60deg',
         '145': '145deg',
       },
-     colors:{
-      borderclr: "#408ACD",
-     } 
-     
-        
+      colors: {
+        borderclr: "#408ACD",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ]
 };

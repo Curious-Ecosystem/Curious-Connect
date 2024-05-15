@@ -4,6 +4,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoMdVideocam } from "react-icons/io";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const MeetingCards = () => {
 	return (
@@ -17,6 +18,33 @@ const MeetingCards = () => {
 					cardDesc="Start An Instant Meeting"
 				/>
 
+<<<<<<< HEAD
+        <MeetingCard
+          style={{ backgroundColor: "#0E78F9" }}
+          icon={<FaUserPlus />}
+          cardHeading="UPCOMING MEETING"
+          cardDesc="VIA INVITATION LINK"
+        />
+
+        <Link to="/createMeeting">
+          <MeetingCard
+            style={{ backgroundColor: "#7c0dec", cursor: "pointer" }}
+            icon={<SlCalender />}
+            cardHeading="SCHEDULE MEETING"
+            cardDesc="PLAN YOUR MEETING"
+          />
+        </Link>
+
+        <MeetingCard
+          style={{ backgroundColor: "#e59c0d" }}
+          icon={<IoMdVideocam />}
+          cardHeading="VIEW STREAMS"
+          cardDesc="VIEW STREAMS ON OUR EVENT PAGE"
+        />
+      </IconContext.Provider>
+    </div>
+  );
+=======
 				<MeetingCard
 					style={{ backgroundColor: "#0E78F9" }}
 					icon={<FaUserPlus />}
@@ -38,6 +66,7 @@ const MeetingCards = () => {
 			</IconContext.Provider>
 		</div>
 	);
+>>>>>>> 2ed28ae9aab187b197c694f1a9a658fb16cb6e53
 };
 
 export default MeetingCards;

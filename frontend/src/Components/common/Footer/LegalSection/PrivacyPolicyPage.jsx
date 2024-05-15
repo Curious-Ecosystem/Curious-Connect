@@ -2,7 +2,7 @@ import React from 'react'
 
 const PrivacyPolicyPage = () => {
     return (
-        <div>
+        <>
             <div className="bg-gradient min-h-screen">
                 <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl font-extrabold text-gray-100 mb-4">
@@ -49,7 +49,7 @@ const PrivacyPolicyPage = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
