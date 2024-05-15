@@ -2,7 +2,7 @@ import React from "react";
 import img2 from "../../../assets/Landing-Page-Assets/refresh.png";
 const JoinWithCode = () => {
   return (
-    <div className="flex tracking-wide justify-center mt-0 mb-20 items-center px-16 py-6  m-3 font-bold text-white normal rounded-xl bg-transparent bg-[#15181dfd] max-md:px-5 lg:mx-16 ">
+    <div className="flex tracking-wide justify-center mt-0 mb-20 items-center px-16 py-6  m-3 font-bold text-white normal rounded-xl bg- bg-[#15181dfd] max-md:px-5 lg:mx-16 ">
       <div className="flex sm:justify-center sm:items-center gap-5 w-full max-w-screen-lg max-md:flex-wrap max-md:max-w-[500px]">
         <div className="flex-auto my-auto text-xl whitespace-nowrap uppercase sm:mx-auto sm:my-auto">
           Paste the meeting code
