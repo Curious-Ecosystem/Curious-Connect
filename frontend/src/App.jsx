@@ -3,10 +3,12 @@ import { LandingPage } from "./Pages/Landing-Page";
 import AboutPage from "./Components/common/Footer/AboutSection/AboutPage";
 import Contact from "./Components/common/Footer/AboutSection/Contact";
 import FAQ from "./Components/common/Footer/AboutSection/FAQ";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/common/Footer/Footer";
 import PrivacyPolicyPage from "./Components/common/Footer/LegalSection/PrivacyPolicyPage";
 import TermsOfService from "./Components/common/Footer/LegalSection/TermsOfService";
+import SignUp from "./Components/common/SignUp";
+import SignIn from "./Components/common/SignIn";
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
           <Route path="/PrivacyPolicyPage" element={<PrivacyPolicyPage />} />
           <Route path="/termsOfService" element={<TermsOfService />} />
 
+          {/* Sign up and Sign  in*/}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
         <Footer />
       </Router>
