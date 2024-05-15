@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
-
 import 'react-datepicker/dist/react-datepicker.css';
 import Sidebar from './Sidebar';
 
@@ -19,13 +18,12 @@ const MeetingDetails = () => {
     return (
         <div>
             <Sidebar />
-            <div className="flex justify-center items-center h-screen">
-                <div className="p-4 bg-gradient w-96 flex flex-col place-items-center ml-60">
-                    <div className='border  border-gray-400 rounded-xl px-4 w-[900px] h-auto'>
+            <div className="flex bg-gradient justify-center items-center h-screen">
+                <div className="p-4 bg-gradient w-96 flex flex-col place-items-center ml-72">
+                    <div className='border  border-gray-400 rounded-xl px-4 w-[750px] h-auto'>
                         <div className="mt-2 w-full p-4">
                             <div className="mb-4 w-full">
                                 <h1 className="text-3xl  font-bold text-white mb-6 text-left w-full ">{title}</h1>
-
                                 <label htmlFor="title" className="block text-gray-100 text-sm font-semibold mb-2">Title</label>
                                 <input type="text" id="title" className="w-full font-semibold border-gray-300 rounded-lg px-4 py-2 focus:outline-1 focus:border-gray-100" value={title} />
                             </div>

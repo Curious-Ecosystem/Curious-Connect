@@ -34,7 +34,7 @@ const CreateMeeting = () => {
         params.append('duration', duration);
 
         const queryString = params.toString();
-        navigate(`/meetingDetails?${queryString}`, { state: { title, url, date, time, duration } });
+        navigate(`/meetingDetails/meetingSetup?${queryString}`, { state: { title, url, date, time, duration } });
     };
 
 
@@ -126,7 +126,6 @@ const CreateMeeting = () => {
                         )}
 
                     </div>
-
                 </div>
             </div>
         </div >
