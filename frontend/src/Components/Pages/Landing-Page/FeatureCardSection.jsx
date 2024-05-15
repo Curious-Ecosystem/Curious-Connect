@@ -1,24 +1,29 @@
 import React from "react";
 
+import ai from "../../../assets/Landing-Page-Assets/ai.png";
+import letter from "../../../assets/Landing-Page-Assets/letter.png";
+import encrypted from "../../../assets/Landing-Page-Assets/encrypted.png";
+import privacy from "../../../assets/Landing-Page-Assets/privacy.png";
+
 const featuresData = [
 	{
-		icon: "../../../media/ai.png",
+		icon: ai,
 		title: "AI Chatbot",
 		description:
 			"Engage with our AI chatbot directly inside the meet and get your doubt clarified",
 	},
 	{
-		icon: "../../../media/letter.png",
+		icon: letter,
 		title: "Interactive White Board",
 		description: "Have realistic interaction with interactive white board",
 	},
 	{
-		icon: "../../../media/encrypted.png",
+		icon: encrypted,
 		title: "End to End Encryption",
 		description: "Enjoy seamless collaboration with end to end encryption",
 	},
 	{
-		icon: "../../../media/privacy.png",
+		icon: privacy,
 		title: "Privacy Protection",
 		description:
 			"Enjoy seamless collaboration without compromising on privacy or security concerns",
@@ -26,8 +31,8 @@ const featuresData = [
 ];
 const Feature = () => {
 	return (
-		<div className="w-full h-full text-cyan-50 text-2xl text-center p-10 md:p-25 mt-10">
-			<h5 className="w-full h-full text-cyan-50 text-2xl text-white p-3 font-semibold text-center">
+		<div className="w-full h-full text-cyan-50 text-2xl text-center p-5 md:p-5 mt-5">
+			<h5 className="w-full h-full text-cyan-50 text-2xl  p-3 font-semibold text-center">
 				Curious Connect Unique Attributes
 			</h5>
 			<p className="text-lg font-normal text-gray-500 p-3">
