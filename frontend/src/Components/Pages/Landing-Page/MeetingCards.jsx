@@ -25,12 +25,15 @@ const MeetingCards = () => {
           cardHeading="UPCOMING MEETING"
           cardDesc="Join Via Invitation Link"
         />
+
+        <Link to={"/createMeeting"}>
         <MeetingCard
           style={{ backgroundColor: '#7c0dec' }}
           icon={<SlCalender />}
           cardHeading="SCHEDULE MEETING"
           cardDesc="Plan Your Meeting"
         />
+        </Link>
         <MeetingCard
           style={{ backgroundColor: '#e59c0d' }}
           icon={<IoMdVideocam />}
