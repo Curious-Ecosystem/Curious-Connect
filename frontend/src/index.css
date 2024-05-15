@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: latin-modern, sans-serif;
+* {
+  font-family: latin-modern, sans-serif;
 }

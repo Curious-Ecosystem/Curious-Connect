@@ -31,5 +31,8 @@
     "mongoose": "^8.3.4",
     "react-datepicker": "^6.9.0",
     "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
   }
 }
