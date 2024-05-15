@@ -39,6 +39,10 @@ export default {
       },
       colors: {
         borderclr: "#408ACD",
+      },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'jetbrains': ['JetBrains Mono', 'monospace'],
       }
     },
   },
