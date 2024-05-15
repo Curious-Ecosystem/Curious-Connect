@@ -2,6 +2,7 @@
   "name": "Signaling",
   "version": "1.0.0",
   "main": "index.js",
+  "type":"module",
   "license": "MIT",
   "dependencies": {
     "http": "^0.0.1-security",
