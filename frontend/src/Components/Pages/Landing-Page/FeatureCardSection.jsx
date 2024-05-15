@@ -31,35 +31,86 @@ const featuresData = [
 ];
 const Feature = () => {
 	return (
-		<div className="w-full h-full text-cyan-50 text-2xl text-center p-5 md:p-5 mt-5">
-			<h5 className="w-full h-full text-cyan-50 text-2xl  p-3 font-semibold text-center">
-				Curious Connect Unique Attributes
-			</h5>
-			<p className="text-lg font-normal text-gray-500 p-3">
-				With SFU integrated server. We engineered a platform with maximum video
-				quality lowest latency that makes your calls crystal clear. Compatible
-				with all browsers and platforms!
-			</p>
-			<div className="m-4 grid gap-6 sm:grid-cols-2 md:grid-cols-4 ">
-				{featuresData.map((feature, index) => (
-					<div
-						key={index}
-						className="p-5 min-h-[100px] rounded-lg bg-white shadow">
-						<img
-							className="w-20 h-20 p-3"
-							src={feature.icon}
-							alt={feature.title}
-						/>
-						<h5 className="mb-2 text-lg text-left font-semibold tracking-tight text-black">
-							{feature.title}
-						</h5>
-						<p className="mb-3 font-normal text-base text-gray-500 text-ellipsis text-left ">
-							{feature.description}
-						</p>
-					</div>
-				))}
-			</div>
-		</div>
+		<>
+		<div className="my-16 flex justify-evenly items-center gap-3">
+		 <div className="w-[250px] rounded-lg border bg-white  shadow-blue-400 shadow-[0_0_6px_3px]">
+      <img 
+        src="https://st5.depositphotos.com/55541054/67076/i/450/depositphotos_670765480-stock-photo-explore-digital-frontier-chatbot-futuristic.jpg"
+        alt="Laptop"
+        className="h-[160px] w-full rounded-md object-cover"
+      />
+      <div className="p-4 flex flex-col items-center justify-center">
+        <h1 className="text-lg font-semibold  ">AI CHATBOT</h1>
+        <p className="mt-2 text-sm text-white-600 p-1">
+          Enagage with our AI chatbot directly inside the meet and get your doubt clarified
+        </p>
+        <button
+          type="button"
+          className="mt-2 rounded-lg bg-blue-600 p-2 text-[13px] font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Read
+        </button>
+      </div>
+    </div>
+	<div className="w-[250px] rounded-lg border  shadow-blue-400 shadow-[0_0_6px_3px]">
+      <img
+        src="https://www.ismartrecruit.com/upload/blog/main_image/Online_team_building_fun_interactive.webp"
+        alt="Team work"
+        className="h-[160px] w-full rounded-md object-cover"
+      />
+      <div className="p-4 flex flex-col items-center justify-center bg-white">
+        <h1 className="text-lg font-semibold  ">Remote Interaction</h1>
+        <p className="mt-2 text-sm text-white-600 p-1">
+          We  help to connect people virtually for office meetings or school classes
+        </p>
+        <button
+          type="button"
+          className="mt-2 rounded-md bg-blue-600 p-2 text-[13px] font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Read
+        </button>
+      </div>
+    </div>
+	<div className="w-[250px] rounded-lg border  shadow-blue-400 shadow-[0_0_6px_3px]">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5cvddIaEk0o0jkC_87lqusobcw6UFvYPXa6jkvkm0g&s"
+        alt="Laptop"
+        className="h-[160px] w-full rounded-md object-cover"
+      />
+      <div className="p-4 flex flex-col items-center justify-center bg-white">
+        <h1 className="text-lg font-semibold  ">Secured Authentication</h1>
+        <p className="mt-2 text-sm text-white-600 p-1">
+          We provide the user a secured authentication to access things accordingly.
+        </p>
+        <button
+          type="button"
+          className="mt-2 rounded-md bg-blue-600 p-2 text-[13px] font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Read
+        </button>
+      </div>
+    </div>
+	<div className="w-[250px] rounded-md border  shadow-blue-400 shadow-[0_0_6px_3px]">
+      <img
+        src="https://act-on.com/wp-content/uploads/2021/08/Privacy-Blog-V3.png"
+        alt="Laptop"
+        className="h-[160px] w-full rounded-md object-cover"
+      />
+      <div className="p-4 flex flex-col items-center justify-center bg-white">
+        <h1 className="text-lg font-semibold  ">Privacy Protection</h1>
+        <p className="mt-2 text-sm text-white-600 p-1">
+          Enjoy seemless collaboration without compromising on privacy.
+        </p>
+        <button
+          type="button"
+          className="mt-2 rounded-md bg-blue-600 p-2 text-[13px] font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Read
+        </button>
+      </div>
+    </div>
+	</div>
+		</>
 	);
 };
 
