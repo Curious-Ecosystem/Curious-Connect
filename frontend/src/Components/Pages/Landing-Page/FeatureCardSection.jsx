@@ -1,29 +1,29 @@
-import React from "react";
-import icon1 from '../../../assets/Landing-Page-Assets/ai.png'
+import React from 'react';
+import icon1 from '../../../assets/Landing-Page-Assets/ai.png';
 
 const featuresData = [
   {
     // icon: "../../../assets/Landing-Page-Assets/ai.png",
-    icon: "/src/assets/Landing-Page-Assets/ai.png",
-    title: "AI Chatbot",
+    icon: '/src/assets/Landing-Page-Assets/ai.png',
+    title: 'AI Chatbot',
     description:
-      "Engage with our AI chatbot directly inside the meet and get your doubt clarified",
+      'Engage with our AI chatbot directly inside the meet and get your doubt clarified',
   },
   {
-    icon: "/src/assets/Landing-Page-Assets/letter.png",
-    title: "Interactive White Board",
-    description: "Have realistic interaction with interactive white board",
+    icon: '/src/assets/Landing-Page-Assets/letter.png',
+    title: 'Interactive White Board',
+    description: 'Have realistic interaction with interactive white board',
   },
   {
-    icon: "/src/assets/Landing-Page-Assets/encrypted.png",
-    title: "End to End Encryption",
-    description: "Enjoy seamless collaboration with end to end encryption",
+    icon: '/src/assets/Landing-Page-Assets/encrypted.png',
+    title: 'End to End Encryption',
+    description: 'Enjoy seamless collaboration with end to end encryption',
   },
   {
-    icon: "/src/assets/Landing-Page-Assets/privacy.png",
-    title: "Privacy Protection",
+    icon: '/src/assets/Landing-Page-Assets/privacy.png',
+    title: 'Privacy Protection',
     description:
-      "Enjoyseamless collaboration without compromising on privacy or security concerns",
+      'Enjoyseamless collaboration without compromising on privacy or security concerns',
   },
 ];
 const Feature = () => {
