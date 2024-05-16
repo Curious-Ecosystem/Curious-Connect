@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -44,13 +44,21 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex-auto mt-3.5 lg:pl-8 text-[16px] font-normal  tracking-wide leading-10 text-white">
-        <span className="font-bold hover:text-[#408ACD] pointer-events-none">EXPLORE</span>
+        <span className="font-bold hover:text-[#408ACD] pointer-events-none">
+          EXPLORE
+        </span>
         <br />
-        <span className="text-white hover:text-[#408ACD] cursor-pointer">Webinars</span >
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">
+          Webinars
+        </span>
         <br />
-        <span className="text-white hover:text-[#408ACD] cursor-pointer">Events</span>
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">
+          Events
+        </span>
         <br />
-        <span className="text-white hover:text-[#408ACD] cursor-pointer">Resources</span>
+        <span className="text-white hover:text-[#408ACD] cursor-pointer">
+          Resources
+        </span>
         <br />
         <span className="text-white hover:text-[#408ACD] cursor-pointer">
           Remote Team Interaction
@@ -61,44 +69,71 @@ const Footer = () => {
         </span>
       </div>
       <div className="pr-16 mt-3.5 text-[16px] font-normal tracking-wide leading-10 text-white max-sm:pr-9">
-        <span className="text-white font-bold hover:text-[#408ACD] pointer-events-none" >ABOUT</span>
+        <span className="text-white font-bold hover:text-[#408ACD] pointer-events-none">
+          ABOUT
+        </span>
         <br />
 
         <div>
-          <Link to="/aboutUs" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+          <Link
+            to="/aboutUs"
+            className="text-white hover:text-[#408ACD]"
+            onClick={scrollToTop}
+          >
             About
           </Link>
           <br />
-          <Link to="/contactUs" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+          <Link
+            to="/contactUs"
+            className="text-white hover:text-[#408ACD]"
+            onClick={scrollToTop}
+          >
             Contact Us
           </Link>
           <br />
-          <Link to="/faq" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+          <Link
+            to="/faq"
+            className="text-white hover:text-[#408ACD]"
+            onClick={scrollToTop}
+          >
             FAQ
           </Link>
         </div>
-
       </div>
       <div className="mt-3.5 lg:mr-10 text-[16px] font-normal tracking-wide leading-10 text-white">
-        <span className="font-bold hover:text-[#408ACD] pointer-events-none">LEGAL</span>
+        <span className="font-bold hover:text-[#408ACD] pointer-events-none">
+          LEGAL
+        </span>
         <br />
-        <Link to="/PrivacyPolicyPage" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+        <Link
+          to="/PrivacyPolicyPage"
+          className="text-white hover:text-[#408ACD]"
+          onClick={scrollToTop}
+        >
           Privacy Policy
         </Link>
         <br />
-        <Link to="/termsOfService" className="text-white hover:text-[#408ACD]" onClick={scrollToTop}>
+        <Link
+          to="/termsOfService"
+          className="text-white hover:text-[#408ACD]"
+          onClick={scrollToTop}
+        >
           Terms Of Service
         </Link>
       </div>
       <div className="flex flex-col mt-3 font-normal">
         <div className="text-[16px] tracking-wide leading-10 text-white">
-          <span className="font-bold hover:text-[#408ACD] pointer-events-none">COLLABORATION</span>
+          <span className="font-bold hover:text-[#408ACD] pointer-events-none">
+            COLLABORATION
+          </span>
           <br />
           <span className="text-white hover:text-[#408ACD] cursor-pointer">
             Virtual Team Interaction
           </span>
           <br />
-          <span className="text-white hover:text-[#408ACD] cursor-pointer ">Webinar</span>
+          <span className="text-white hover:text-[#408ACD] cursor-pointer ">
+            Webinar
+          </span>
           <br />
           <span className="text-white hover:text-[#408ACD] cursor-pointer">
             Virtual Meetings

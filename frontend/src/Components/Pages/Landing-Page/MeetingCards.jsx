@@ -43,27 +43,6 @@ const MeetingCards = () => {
 			</IconContext.Provider>
 		</div>
 	);
-	// 		<MeetingCard
-	// 			style={{ backgroundColor: "#0E78F9" }}
-	// 			icon={<FaUserPlus />}
-	// 			cardHeading="UPCOMING MEETING"
-	// 			cardDesc="Join Via Invitation Link"
-	// 		/>
-	// 		<MeetingCard
-	// 			style={{ backgroundColor: "#7c0dec" }}
-	// 			icon={<SlCalender />}
-	// 			cardHeading="SCHEDULE MEETING"
-	// 			cardDesc="Plan Your Meeting"
-	// 		/>
-	// 		<MeetingCard
-	// 			style={{ backgroundColor: "#e59c0d" }}
-	// 			icon={<IoMdVideocam />}
-	// 			cardHeading="VIEW STREAMS"
-	// 			cardDesc="View Previous Recordings"
-	// 		/>
-	// 	</IconContext.Provider >
-	// </div >
-	// );
 };
 
 export default MeetingCards;
