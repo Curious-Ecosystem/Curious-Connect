@@ -1,0 +1,50 @@
+name: "Documentation 📋"
+description: "Use this form to present your suggestions on how to improve our docs"
+title: "[DOCS] <write your suggestion here>"
+labels: ["documenation", "goal: enhancement"]
+
+body:
+  - type: textarea
+    id: docs_description
+    attributes:
+      label: "Issue Description"
+      description: "Please provide a brief summary of the documentation issue you are experiencing or would like to address."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots_examples_docs
+    attributes:
+      label: "Screenshots or Examples (if applicable)"
+      description: "Please include relevant screenshots or examples to help illustrate the problem."
+
+  - type: textarea
+    id: proposed_solution_docs
+    attributes:
+      label: "Proposed Solution (optional)"
+      description: "If you have a proposed solution for the documentation issue, please provide it here. This can be helpful for speeding up the resolution process."
+
+  - type: checkboxes
+    id: terms_checklist_docs
+    attributes:
+      label: "Checklist"
+      description: "By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CODE_OF_CONDUCT.md)"
+      options:
+        - label: "I have checked the existing [issues](https://github.com/Curious-Ecosystem/Curious-Connect/issues)."
+          required: true
+
+        - label: "I have read the [Contributing Guidelines](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CONTRIBUTING.md)"
+          required: true
+
+        - label: "I have read the [Code Of Conduct](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CODE_OF_CONDUCT.md)"
+          required: true
+        - label: "I joined onboarding group for knowledge flow and direct conversation and support from admins  [Curious Developers Community - Curious Connect](https://chat.whatsapp.com/FR0sVnpsSvL4J4l56vLdBN)"
+          required: true
+
+        - label: "The changes don't break the code"
+          required: true
+        - label: "Please attach the screenshots and video of the development work once it is done "
+          required: true
+        - label: "If you need any help please join the default  ([Google Meet Link](https://meet.google.com/bwp-aasw-xbk))"
+          required: true
+

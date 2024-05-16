@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from "./Components/common/Footer/Footer";
 import PrivacyPolicyPage from "./Components/common/Footer/LegalSection/PrivacyPolicyPage";
 import TermsOfService from "./Components/common/Footer/LegalSection/TermsOfService";
+import CreateMeeting from "./Pages/Create-Meeting-Page";
+import MeetingDetails from "./Components/Pages/Meeting-Page/Meeting-Details";
+import MeetingAvailability from "./Components/Pages/Meeting-Page/Meeting-Availability";
 
 const App = () => {
   return (
@@ -23,8 +26,13 @@ const App = () => {
           <Route path="/PrivacyPolicyPage" element={<PrivacyPolicyPage />} />
           <Route path="/termsOfService" element={<TermsOfService />} />
 
+          {/* meetings  */}
+          <Route path="/createMeeting" element={<CreateMeeting />} />
+          <Route path="/meetingDetails/meetingSetup" element={<MeetingDetails />} />
+          <Route path="/meetingDetails/meetingAvailaibility" element={<MeetingAvailability />} />
+
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
