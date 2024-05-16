@@ -15,5 +15,4 @@ const createWorker = async () => {
     setTimeout(() => process.exit(1), 2000);
   });
 };
-
 createWorker();
