@@ -30,18 +30,18 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="bg-gradient min-h-screen">
-      <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-extrabold text-gray-100 mb-8">
+    <div className='bg-gradient min-h-screen'>
+      <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+        <h1 className='text-3xl font-extrabold text-gray-100 mb-8'>
           Frequently Asked Questions
         </h1>
-        <div className="divide-y divide-gray-200">
+        <div className='divide-y divide-gray-200'>
           {faqs.map((faq, index) => (
-            <div key={index} className="py-6">
-              <dt className="text-lg leading-6 font-medium text-gray-100">
+            <div key={index} className='py-6'>
+              <dt className='text-lg leading-6 font-medium text-gray-100'>
                 {faq.question}
               </dt>
-              <dd className="mt-2 text-base text-gray-100">{faq.answer}</dd>
+              <dd className='mt-2 text-base text-gray-100'>{faq.answer}</dd>
             </div>
           ))}
         </div>
