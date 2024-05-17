@@ -12,16 +12,18 @@ const Footer = () => {
   return (
     <div className='flex md:flex-wrap lg:flex-nowrap gap-5 items-start px-7 pt-10 pb-6 max-md:flex-wrap max-md:px-5'>
       <div className='flex flex-col'>
-        <div className='flex gap-4 text-xl font-bold tracking-wide text-center text-white'>
-          <img
-            loading='lazy'
-            src='https://lh3.googleusercontent.com/pw/AP1GczN_OhGK6i9fSwFhRHN26Oyy7wBqKwiicj9UEFEK5hYKnc9TZTwlQvvewSPpX2DJdvO1ZAnrPltIAGqqRqAT-8g6cIdZ97I69m-dplI7voq9GLhr_NLH1dLDHbaJQWqcdWn39u3ShkkudNoSCzOpeNuZ=w65-h68-s-no-gm?authuser=0'
-            className='shrink-0 aspect-[0.95] w-[65px]'
-          />
-          <div className='flex-auto lg:pr-52 my-auto pr-[19vw] md:pr-52'>
-            Curious Connect
+        <Link to="/">
+          <div className='flex gap-4 text-xl font-bold tracking-wide text-center text-white'>
+            <img
+              loading='lazy'
+              src='https://lh3.googleusercontent.com/pw/AP1GczN_OhGK6i9fSwFhRHN26Oyy7wBqKwiicj9UEFEK5hYKnc9TZTwlQvvewSPpX2DJdvO1ZAnrPltIAGqqRqAT-8g6cIdZ97I69m-dplI7voq9GLhr_NLH1dLDHbaJQWqcdWn39u3ShkkudNoSCzOpeNuZ=w65-h68-s-no-gm?authuser=0'
+              className='shrink-0 aspect-[0.95] w-[65px]'
+            />
+            <div className='flex-auto lg:pr-52 my-auto pr-[19vw] md:pr-52'>
+              Curious Connect
+            </div>
           </div>
-        </div>
+        </Link>
         <div className='mt-8 text-xl font-bold tracking-wide leading-10 text-white'>
           Subscribe To Our Newsletter
           <br />
