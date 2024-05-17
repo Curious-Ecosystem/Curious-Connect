@@ -9,30 +9,42 @@ import PrivacyPolicyPage from './Components/common/Footer/LegalSection/PrivacyPo
 import TermsOfService from './Components/common/Footer/LegalSection/TermsOfService';
 import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
+import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
 import SignInPage from './Pages/SignIn-Page';
 
 const App = () => {
   return (
-    <div className="bg-gradient">
+    <div className='bg-gradient'>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path='/' element={<LandingPage />} />
           {/* about section */}
-          <Route path="/aboutUs" element={<AboutPage />} />
-          <Route path="/contactUs" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path='/aboutUs' element={<AboutPage />} />
+          <Route path='/contactUs' element={<Contact />} />
+          <Route path='/faq' element={<FAQ />} />
 
           {/* legal section  */}
-          <Route path="/PrivacyPolicyPage" element={<PrivacyPolicyPage />} />
-          <Route path="/termsOfService" element={<TermsOfService />} />
+          <Route path='/PrivacyPolicyPage' element={<PrivacyPolicyPage />} />
+          <Route path='/termsOfService' element={<TermsOfService />} />
 
           {/* meetings  */}
+
           <Route path="/createMeeting" element={<CreateMeeting />} />
           <Route path="/meetingDetails" element={<MeetingDetails />} />
 
-          {/* Auth Section  */}
+          <Route path='/createMeeting' element={<CreateMeeting />} />
+          <Route
+            path='/meetingDetails/meetingSetup'
+            element={<MeetingDetails />}
+          />
+          <Route
+            path='/meetingDetails/meetingAvailaibility'
+            element={<MeetingAvailability />}
+          />
+              
+           {/* Auth Section  */}
           <Route path="/signin" element={<SignInPage />} />
-          
+
         </Routes>
         <Footer />
       </Router>
