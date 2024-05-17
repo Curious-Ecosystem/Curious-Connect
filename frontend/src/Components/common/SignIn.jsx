@@ -4,7 +4,7 @@ const SignIn = () => {
   return <div>
     <div className="flex justify-center items-center px-12 py-12 max-md:px-2">
       <div className="flex lg:flex-nowrap flex-wrap flex-row gap-10 justify-between w-full max-w-[1209px] max-md:flex-wrap max-md:max-w-full">
-        <div className="flex flex-col self-start font-extrabold text-white max-md:mt-10">
+        <div className="flex flex-col ml-1 self-start font-extrabold text-white max-md:mt-10">
         <div className="flex gap-4 mb-16 lg:mt-10 text-xl font-bold tracking-wide text-center text-white">
           <img
             src="https://lh3.googleusercontent.com/pw/AP1GczN_OhGK6i9fSwFhRHN26Oyy7wBqKwiicj9UEFEK5hYKnc9TZTwlQvvewSPpX2DJdvO1ZAnrPltIAGqqRqAT-8g6cIdZ97I69m-dplI7voq9GLhr_NLH1dLDHbaJQWqcdWn39u3ShkkudNoSCzOpeNuZ=w65-h68-s-no-gm?authuser=0"
