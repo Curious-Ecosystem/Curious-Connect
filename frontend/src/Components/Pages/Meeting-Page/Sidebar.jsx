@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className='relative'>
       <aside
         id='default-sidebar'
-        className='fixed top-0 left-0 z-40 w-80 h-screen border-r border-gray-600 transition-transform -translate-x-full sm:translate-x-0 shadow-right bg-white'
+        className='w-11/13 top-0 left-0 z-40 h-full border-r border-b border-gray-400 transition-transform -translate-x-full sm:translate-x-0 shadow-right bg-white'
+        style={{ height: 'calc(100vh - 4rem)' }} // Adjust the height as needed
         aria-label='Sidebar'>
         <div className='h-full px-3 py-4 overflow-y-auto bg-gradient dark:bg-gray-700'>
           <a href='/' className='flex items-center ps-2.5 mb-5 p-2'>
