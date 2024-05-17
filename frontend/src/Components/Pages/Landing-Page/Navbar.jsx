@@ -24,7 +24,7 @@ const Navbar = () => {
   const selectedClass = 'font-semibold border-b-2 border-b-white pb-1';
 
   return (
-    <div className='h-20 flex gap-20 text-white items-center justify-between p-4 pt-8 px-20 relative'>
+    <div className='h-20 flex gap-20 text-white items-center justify-between pt-8 md:px-20 px-2 relative'>
       <div className='flex items-center gap-6'>
         <img src={logo} className='size-16 rounded-full ' />
         <span className='text-center font-bold'>
@@ -37,48 +37,48 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'fixed left-0 top-0 w-[20%] h-full border-r border-r-gray-900 ease-in-out duration-500 bg-gradient z-50'
+            ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-gray-900 ease-in-out duration-500 bg-gradient z-50'
             : 'fixed left-0 top-0 left-[-100%] ease-in-out duration-500'
         }>
-        <ul className=' flex flex-col gap-6 items-center py-12'>
-          <img src={logo} className='size-16 rounded-full ' />
+        <div className=' flex flex-col gap-6 py-12'>
+          <img src={logo} className='size-16 rounded-full mx-auto' />
           <Link to={'/'}>
-            <span
-              className='p-4 border-b-slate-500 border-b'
+            <div
+              className='p-4 border-b-slate-500 border-b w-[100%]'
               onClick={() => {
                 setActive(0);
               }}>
               Home
-            </span>
+            </div>
           </Link>
           <Link to={'/aboutUs'}>
-            <span
+            <div
               className='p-4 border-b-slate-500 border-b'
               onClick={() => {
                 setActive(1);
               }}>
               About
-            </span>
+            </div>
           </Link>
           <Link to={'/contactUs'}>
-            <span
+            <div
               className='p-4 border-b-slate-500 border-b'
               onClick={() => {
                 setActive(2);
               }}>
               Contact
-            </span>
+            </div>
           </Link>
           <Link to={'/faq'}>
-            <span
+            <div
               className='p-4 border-b-slate-500 border-b'
               onClick={() => {
                 setActive(3);
               }}>
               FAQ
-            </span>
+            </div>
           </Link>
-        </ul>
+        </div>
       </div>
       <div className='hidden lg:flex justify-between gap-28 items-center z-20'>
         <Link to={'/'}>
