@@ -20,32 +20,32 @@ const OurProducts = () => {
   ];
 
   return (
-    <div className="w-full h-full text-cyan-50 text-center">
-      <h1 className="font-normal text-3xl font-poppins p-3">
+    <div className='w-full h-full text-cyan-50 text-center'>
+      <h1 className='font-normal text-3xl font-poppins p-3'>
         View Other Products
       </h1>
-      <div className="flex flex-wrap justify-evenly mt-8 gap-3">
+      <div className='flex flex-wrap justify-evenly mt-8 gap-3'>
         <div>
           <img
             src={Curious}
-            className="w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]"
+            className='w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]'
           />
-          <p className="mt-5 font-bold font-2xl">Curious Ecosystem</p>
+          <p className='mt-5 font-bold font-2xl'>Curious Ecosystem</p>
         </div>
         <div>
           <img
             src={CDC}
-            className="w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]"
+            className='w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]'
           />
-          <p className="mt-5 font-bold font-2xl">Curious Community</p>
+          <p className='mt-5 font-bold font-2xl'>Curious Community</p>
         </div>
 
         <div>
           <img
             src={Inspiration}
-            className="w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]"
+            className='w-44 rounded-full shadow-slate-400 shadow-[0_0_20px_5px]'
           />
-          <p className="mt-5 font-bold font-2xl">Inspiration APP</p>
+          <p className='mt-5 font-bold font-2xl'>Inspiration APP</p>
         </div>
 
         {/* {ProductData.map((product, index) => (
