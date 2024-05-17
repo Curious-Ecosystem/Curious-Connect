@@ -3,6 +3,11 @@ const zod  = require("zod");
 
 const RegisterSchema = zod.object({
     name: zod
+      .string({ required_error: "username Is Required" })
+      .trim()
+      .min(3, { message: "Username must be at least 3 characters" })
+      .max(255, { message: "Username can be at most 255 characters" }),
+    email: zod
       .string({ required_error: "Email is required" })
       .trim()
       .email({ message: "Invalid Email Address" })
@@ -12,13 +17,7 @@ const RegisterSchema = zod.object({
       .string({ required_error: "Password is required" })
       .trim()
       .min(7, { message: "Password must be at least 7 characters" })
-      .max(1024, { message: "Password must be at most 1024 characters" }),
-    email: zod
-      .string({ required_error: "Email is required" })
-      .trim()
-      .email({message : "invalide Email Address"})
-      .min(3, { message: "Email must be at least of 3 characters" })
-      .max(255, { message: "Email must be more than 255 characters" }),
+      .max(1024, { message: "Password must be at most 1024 characters" })
   });
 
   
