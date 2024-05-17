@@ -1,1 +1,21 @@
+version: "1.0"
+contributors_guidelines:
+  title: "Contributing Guidelines"
+  link: "https://github.com/CuriousEcosystem/contributing-guidelines"
+code_of_conduct:
+  title: "Code of Conduct"
+  link: "https://github.com/CuriousEcosystem/code-of-conduct"
+onboarding_group:
+  title: "Onboarding Group"
+  link: "https://curiousconnect.onboarding.group"
+developers_community:
+  title: "Curious Developers Community"
+  link: "https://curiousconnect.community"
+support_email:
+  subject: "Support Inquiry"
+  email: "admin@curiousdevelopers.in"
+certificate_award:
+  title: "Certificate of Appreciation"
+  email: "admin@curiousdevelopers.in"
+  note: "Please attach your issue number for claiming."
 
