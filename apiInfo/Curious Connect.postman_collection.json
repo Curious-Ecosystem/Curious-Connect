@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"name\" : \"Kairu\",\r\n\"email\" : \"Kairu@example.com\" ,\r\n\"password\" : \"example@password\"\r\n}\r\n\r\n",
+							"raw": "{\r\n\"name\" : \"James\",\r\n\"email\" : \"James@example.com\" ,\r\n\"password\" : \"example@password\"\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/sign-up",
-							"protocol": "http",
+							"raw": "{{BaseURL}}/api/sign-up",
 							"host": [
-								"localhost"
+								"{{BaseURL}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"sign-up"
@@ -45,7 +43,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"email\":\"Kairu@example.com\",\r\n\"password\": \"example@password\"\r\n}",
+							"raw": "{\"email\":\"James@example.com\",\r\n\"password\": \"example@password\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -53,12 +51,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/sign-in",
-							"protocol": "http",
+							"raw": "{{BaseURL}}/api/sign-in",
 							"host": [
-								"localhost"
+								"{{BaseURL}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"sign-in"
