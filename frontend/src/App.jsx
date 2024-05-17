@@ -9,6 +9,7 @@ import PrivacyPolicyPage from './Components/common/Footer/LegalSection/PrivacyPo
 import TermsOfService from './Components/common/Footer/LegalSection/TermsOfService';
 import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
+import SignInPage from './Pages/SignIn-Page';
 
 const App = () => {
   return (
@@ -28,6 +29,10 @@ const App = () => {
           {/* meetings  */}
           <Route path="/createMeeting" element={<CreateMeeting />} />
           <Route path="/meetingDetails" element={<MeetingDetails />} />
+
+          {/* Auth Section  */}
+          <Route path="/signin" element={<SignInPage />} />
+          
         </Routes>
         <Footer />
       </Router>
