@@ -11,24 +11,29 @@ const MeetingAvailability = () => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const data = [];
   const [selectedButtons, setSelectedButtons] = useState([]);
+  const [selectedDates, setSelectedDates] = useState([]);
 
   const handleButtonClick = (buttonId) => {
-    // Check if the button is already selected
     const isSelected = selectedButtons.includes(buttonId);
-
     if (isSelected) {
-      // If selected, remove it from the list
       setSelectedButtons(selectedButtons.filter((id) => id !== buttonId));
     } else {
-      // If not selected, add it to the list
       setSelectedButtons([...selectedButtons, buttonId]);
+    }
+  };
+
+  const handleDateClick = (date) => {
+    const isSelected = selectedDates.includes(date);
+    if (isSelected) {
+      setSelectedDates(selectedDates.filter((d) => d !== date));
+    } else {
+      setSelectedDates([...selectedDates, date]);
     }
   };
 
   for (let i = 0; i < 7; i++) {
     const date = new Date(currentDate);
     date.setDate(currentDate.getDate() + i);
-
     data.push({
       date: date.toLocaleDateString(),
       day: daysOfWeek[date.getDay()],
@@ -53,7 +58,7 @@ const MeetingAvailability = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'middle',
-    transition: 'transform 0.5s ease', // Add transition for smooth movement
+    transition: 'transform 0.5s ease',
   };
 
   const slideContentStyle = {
@@ -86,177 +91,237 @@ const MeetingAvailability = () => {
     }
   };
 
+  const saveAvailability = () => {
+    const availabilityData = {
+      dates: selectedDates,
+      slots: selectedButtons.map((buttonId) => {
+        const timeMapping = {
+          button1: '09:15 AM',
+          button2: '09:45 AM',
+          button3: '10:15 AM',
+          button4: '10:45 AM',
+          button5: '11:15 AM',
+          button6: '11:45 AM',
+          button7: '12:15 PM',
+          button8: '12:45 PM',
+          button9: '01:15 PM',
+          button10: '01:45 PM',
+        };
+        return timeMapping[buttonId];
+      }),
+    };
+
+    fetch('http://localhost:5000/mentor-data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(availabilityData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('availability data saved to MongoDB: ', data);
+      })
+      .catch((error) => {
+        console.error('error saving availability data to MongoDB: ', error);
+      });
+  };
+
   return (
-    <div>
-      <style>
-        {`
-                .slick-prev, .slick-next {
-                    display: none !important;
-                }
-                `}
-      </style>
-      <Sidebar />
-      <div className='flex justify-center items-center h-screen'>
-        <div className='p-4 bg-gradient w-96 flex flex-col place-items-center ml-60'>
-          <div className='border text-white border-gray-400 rounded-xl px-4 w-[700px] h-auto p-3'>
-            <div className='flex flex-row justify-between'>
-              <h1 className='text-xl px-2 font-bold text-white mb- text-left w-full p-4'>
-                Availabile Dates{' '}
-              </h1>
-              <div className='flex justify-end mr-[-10px]'>
-                <div className='bg-gradient px-4 py-3 sm:px-6 sm:flex'>
-                  <span className='mt-3 flex rounded-md p-[-10px] shadow-sm sm:mt-0 sm:w-auto'>
-                    <button
-                      className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10  mt-1  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
-                      onClick={handlePrevious}>
-                      Previous
-                    </button>
-                  </span>
-                  <span className='mt-3 flex rounded-md p-[-10px] shadow-sm sm:mt-0 sm:w-auto'>
-                    <button
-                      className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10  mt-1 text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
-                      onClick={handleNext}>
-                      Next
-                    </button>
-                  </span>
+    <div className='flex flex-col min-h-screen'>
+      <div className='flex flex-grow'>
+        <style>
+          {`
+          .slick-prev, .slick-next {
+            display: none !important;
+          }
+        `}
+        </style>
+        <Sidebar />
+        <div className='flex justify-center items-center h-screen'>
+          <div className='p-4 bg-gradient w-96 flex flex-col place-items-center ml-60'>
+            <div className='border text-white border-gray-400 rounded-xl px-4 w-[700px] h-auto p-3'>
+              <div className='flex flex-row justify-between'>
+                <h1 className='text-xl px-2 font-bold text-white mb- text-left w-full p-4'>
+                  Available Dates{' '}
+                </h1>
+                <div className='flex justify-end mr-[-10px]'>
+                  <div className='bg-gradient px-4 py-3 sm:px-6 sm:flex'>
+                    <span className='mt-3 flex rounded-md p-[-10px] shadow-sm sm:mt-0 sm:w-auto'>
+                      <button
+                        className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10  mt-1  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
+                        onClick={handlePrevious}>
+                        Previous
+                      </button>
+                    </span>
+                    <span className='mt-3 flex rounded-md p-[-10px] shadow-sm sm:mt-0 sm:w-auto'>
+                      <button
+                        className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10  mt-1 text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
+                        onClick={handleNext}>
+                        Next
+                      </button>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className='flex justify-center'>
-              <Slider {...settings}>
-                {data.slice(startIndex, startIndex + 3).map((d, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      ...slideContainerStyle,
-                      transform: `translateX(${index * 100}%)`,
-                    }}>
+              <div className='flex justify-center'>
+                <Slider {...settings}>
+                  {data.slice(startIndex, startIndex + 3).map((d, index) => (
                     <div
-                      style={slideContainerStyle}
-                      className='bg-white  h-28 flex flex-col align-center items-center rounded-lg mt-16'>
-                      <div style={slideContentStyle}>
-                        <div className='text-center'>
-                          <div
-                            style={dateStyle}
-                            className='text-gray-900 font-bold'>
-                            {d.date}
-                          </div>
-                          <div
-                            style={dayStyle}
-                            className='text-gray-600 font-bold'>
-                            {d.day}
+                      key={index}
+                      style={{
+                        ...slideContainerStyle,
+                        transform: `translateX(${index * 100}%)`,
+                      }}>
+                      <div
+                        onClick={() => handleDateClick(d.date)}
+                        style={{
+                          ...slideContainerStyle,
+                          backgroundColor: selectedDates.includes(d.date)
+                            ? 'white'
+                            : '#1F2329',
+                          cursor: 'pointer',
+                        }}
+                        className='border border-2 h-28 flex flex-col align-center items-center rounded-lg mt-16'>
+                        <div style={slideContentStyle}>
+                          <div className='text-center'>
+                            <div
+                              style={dateStyle}
+                              className={`font-bold ${
+                                selectedDates.includes(d.date)
+                                  ? 'text-black'
+                                  : 'text-white'
+                              }`}>
+                              {d.date}
+                            </div>
+                            <div
+                              style={dayStyle}
+                              className={`font-bold ${
+                                selectedDates.includes(d.date)
+                                  ? 'text-black'
+                                  : 'text-black'
+                              }`}>
+                              {d.day}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
+                  ))}
+                </Slider>
+              </div>
 
-            <div className='border-b border-gray-700 mt-10'></div>
+              <div className='border-b border-gray-700 mt-10'></div>
 
-            <div className='flex items-center mt-6'>
-              <h1 className='text-xl px-2 font-bold text-white p-2'>
-                Availabile Slots
-              </h1>
-              <p className='text-xs font-normal  text-white ml-[-10px] mt-[4px] p-3'>
-                Click on the time slot to select
-              </p>
-            </div>
+              <div className='flex items-center mt-6'>
+                <h1 className='text-xl px-2 font-bold text-white p-2'>
+                  Available Slots
+                </h1>
+                <p className='text-xs font-normal text-white ml-[-10px] mt-[4px] p-3'>
+                  Click on the time slot to select
+                </p>
+              </div>
 
-            <div className='flex flex-col justify-center'>
-              <div className='flex justify-center gap-4 p-4'>
+              <div className='flex flex-col justify-center'>
+                <div className='flex justify-center gap-4 p-4'>
+                  <Button
+                    color={
+                      selectedButtons.includes('button1') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button1')}>
+                    09:15 AM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button2') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button2')}>
+                    09:45 AM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button3') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button3')}>
+                    10:15 AM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button4') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button4')}>
+                    10:45 AM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button5') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button5')}>
+                    11:15 AM
+                  </Button>
+                </div>
+                <div className='flex justify-center gap-4 p-4'>
+                  <Button
+                    color={
+                      selectedButtons.includes('button6') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button6')}>
+                    11:45 AM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button7') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button7')}>
+                    12:15 PM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button8') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button8')}>
+                    12:45 PM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button9') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button9')}>
+                    01:15 PM
+                  </Button>
+                  <Button
+                    color={
+                      selectedButtons.includes('button10') ? 'light' : 'primary'
+                    }
+                    className='font-semibold border border-2'
+                    onClick={() => handleButtonClick('button10')}>
+                    01:45 PM
+                  </Button>
+                </div>
+              </div>
+
+              <div className='flex justify-center'>
                 <Button
-                  color={
-                    selectedButtons.includes('button1') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button1')}>
-                  09:15 AM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button2') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button2')}>
-                  09:45 AM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button3') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button3')}>
-                  10:15 AM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button4') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button4')}>
-                  10:45 AM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button5') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button5')}>
-                  11:15 AM
+                  className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10  mt-1  text-sm px-5 py-0.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
+                  onClick={saveAvailability}>
+                  Save Your Availability
                 </Button>
               </div>
-              <div className='flex justify-center gap-4 mt-[-18px] p-4'>
-                <Button
-                  color={
-                    selectedButtons.includes('button6') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button6')}>
-                  11:45 AM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button7') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button7')}>
-                  12:15 PM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button8') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button8')}>
-                  12:45 PM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button9') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button9')}>
-                  01:15 PM
-                </Button>
-                <Button
-                  color={
-                    selectedButtons.includes('button10') ? 'light' : 'primary'
-                  }
-                  className='font-semibold border border-2'
-                  onClick={() => handleButtonClick('button10')}>
-                  01:45 PM
-                </Button>
-              </div>
-            </div>
-
-            <div className='flex justify-center p-2 '>
-              <button className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-1 font-semibold rounded-lg h-10 w-96 mt-1 text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'>
-                Save Your Availability Details on {data[startIndex].date}
-              </button>
             </div>
           </div>
         </div>
