@@ -28,10 +28,6 @@ const App = () => {
           <Route path='/termsOfService' element={<TermsOfService />} />
 
           {/* meetings  */}
-
-          <Route path="/createMeeting" element={<CreateMeeting />} />
-          <Route path="/meetingDetails" element={<MeetingDetails />} />
-
           <Route path='/createMeeting' element={<CreateMeeting />} />
           <Route
             path='/meetingDetails/meetingSetup'
