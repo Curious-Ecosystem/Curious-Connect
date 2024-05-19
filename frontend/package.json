@@ -25,7 +25,8 @@
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
