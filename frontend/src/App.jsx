@@ -10,6 +10,7 @@ import TermsOfService from './Components/common/Footer/LegalSection/TermsOfServi
 import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
+import Login from "./Pages/SignIn-Page";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<LandingPage />} />
+          <Route path='/login' element={<Login />} />
           {/* about section */}
           <Route path='/aboutUs' element={<AboutPage />} />
           <Route path='/contactUs' element={<Contact />} />
