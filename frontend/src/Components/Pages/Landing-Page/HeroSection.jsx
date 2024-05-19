@@ -67,9 +67,9 @@ const HeroSection = () => {
           <div
             className='lg:w-[20vw] shadow-md shadow-black lg:top-1 w-[20vw] lg:h-[15vw] z-0 h-[100px] absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] lg:block hidden border-[#0D7A9F] border-[solid] ml-[25vw] opacity-50'
             style={{
-              background: 'rgb(7,153,200)',
-              background:
-                'linear-gradient(216deg, rgba(7,153,200,1) 0%, rgba(17,63,81,0.3086484593837535) 91%)',
+              background: 'rgb(22,73,99)',
+              background: 
+                  'linear-gradient(90deg, rgba(22,73,99,1) 72%, rgba(30,115,170,1) 97%)',
             }}></div>
         </div>
       </div>
