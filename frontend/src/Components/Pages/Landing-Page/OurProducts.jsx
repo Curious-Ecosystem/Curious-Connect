@@ -21,7 +21,7 @@ const OurProducts = () => {
 
   return (
     <div className='w-full h-full text-cyan-50 text-center'>
-      <h1 className='font-normal text-3xl font-poppins p-3'>
+      <h1 className='font-normal text-3xl font-poppins p-3 mt-20'>
         View Other Products
       </h1>
       <div className='flex flex-wrap justify-evenly mt-8 gap-3'>

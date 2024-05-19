@@ -10,7 +10,7 @@ const Footer = () => {
   }
 
   return (
-    <div className='flex md:flex-wrap lg:flex-nowrap gap-5 items-start px-7 pt-10 pb-6 max-md:flex-wrap max-md:px-5'>
+    <div className='flex md:flex-wrap lg:flex-nowrap gap-5 items-start px-7 pt-10 pb-6 max-md:flex-wrap max-md:px-5 mt-20'>
       <div className='flex flex-col'>
         <div className='flex gap-4 text-xl font-bold tracking-wide text-center text-white'>
           <img

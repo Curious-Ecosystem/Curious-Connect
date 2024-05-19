@@ -3,7 +3,8 @@
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"
     },
-    "css.lint.unknownAtRules": "ignore"
+    "css.lint.unknownAtRules": "ignore",
+    "liveServer.settings.port": 5501
   
     // "emmet.syntaxProfiles": {
     //   "javascript": "jsx"

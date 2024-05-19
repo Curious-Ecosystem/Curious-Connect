@@ -29,7 +29,7 @@ const featuresData = [
 const Feature = () => {
   return (
     <div className='w-full h-full text-cyan-50 text-2xl text-center p-5 md:p-5 mt-5'>
-      <h5 className='w-full h-full text-cyan-50 text-2xl md:text-3xl leading-8 md:leading-3 tracking-normal p-3 font-semibold text-center'>
+      <h5 className='w-full h-full text-cyan-50 text-2xl md:text-3xl leading-8 md:leading-3 tracking-normal p-3 font-semibold text-center mt-20'>
         Curious Connect Unique Attributes
       </h5>
       <p className='text-sm md:text-xl font-normal tracking-normal text-gray-500 p-3 w-[98%] md:w-[70%] mx-auto'>
