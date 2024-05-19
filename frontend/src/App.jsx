@@ -10,6 +10,7 @@ import TermsOfService from './Components/common/Footer/LegalSection/TermsOfServi
 import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
+import ErrorPage from './Pages/Error-Page';
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
             path='/meetingDetails/meetingAvailaibility'
             element={<MeetingAvailability />}
           />
+          {/* Error  */}
+        <Route path='*' element={<ErrorPage />} />
         </Routes>
         <Footer />
       </Router>
