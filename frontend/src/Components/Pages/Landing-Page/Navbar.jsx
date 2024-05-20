@@ -87,6 +87,15 @@ const Navbar = () => {
             onClick={() => {
               setActive(0);
             }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/wmwqvixz.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
             Home
           </span>
         </Link>
@@ -96,6 +105,15 @@ const Navbar = () => {
             onClick={() => {
               setActive(1);
             }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/jnzhohhs.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
             About
           </span>
         </Link>
@@ -105,6 +123,15 @@ const Navbar = () => {
             onClick={() => {
               setActive(2);
             }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/srsgifqc.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
             Contact
           </span>
         </Link>
@@ -114,6 +141,15 @@ const Navbar = () => {
             onClick={() => {
               setActive(3);
             }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/pyoiumqr.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
             FAQ
           </span>
         </Link>
