@@ -31,21 +31,6 @@ const HeroSectionMobileView = () => {
           {/* image div */}
           <div className='w-full flex justify-center p-3 object-contain '>
             <svg
-              width='229'
-              height='249'
-              viewBox='0 0 229 249'
-              className='lg:top-0 absolute lg:block hidden z-0 mr-[41vw]'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M3 1C62.0625 174.11 177.609 236.462 228 246'
-                stroke='#408ACD'
-                stroke-opacity='0.65'
-                stroke-width='5'
-              />
-            </svg>
-
-            <svg
               width='101'
               height='85'
               viewBox='0 0 111 95'
