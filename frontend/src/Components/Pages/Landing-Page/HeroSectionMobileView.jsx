@@ -29,7 +29,7 @@ const HeroSectionMobileView = () => {
           </div>
 
           {/* image div */}
-          <div className='w-full flex justify-center p-3 object-contain '>
+          <div className='w-full flex justify-center p-3 object-contain'>
             <svg
               width='101'
               height='85'
@@ -62,7 +62,7 @@ const HeroSectionMobileView = () => {
 
             <img src={img} alt='home' className='w-[520px] mt-2 z-10' />
             <div
-              className='shadow-md shadow-black left-3/4 bottom-80 w-[100vw] h-[84vw] md:hidden z-0 absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] border-[#0D7A9F] border-[solid] opacity-60'
+              className='shadow-md shadow-black right-0 bottom-80 w-[25vw] h-[84vw] md:hidden z-0 absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] border-r-0 rounded-r-none border-[#0D7A9F] border-[solid] opacity-60'
               style={{
                 background: 'rgb(7,153,200)',
                 background:
