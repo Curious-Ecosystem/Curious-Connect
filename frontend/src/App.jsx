@@ -11,11 +11,13 @@ import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
 import SignInPage from './Pages/SignIn-Page';
+import Navbar from './Components/Pages/Landing-Page/Navbar';
 
 const App = () => {
   return (
     <div className='bg-gradient'>
       <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<LandingPage />} />
           {/* about section */}
