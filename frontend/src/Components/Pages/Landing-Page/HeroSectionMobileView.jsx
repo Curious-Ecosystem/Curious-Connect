@@ -9,13 +9,13 @@ const HeroSectionMobileView = () => {
     <div>
       <div className='justify-center tracking-wide items-center text-cyan-50 font-bold flex flex-col md:flex-row lg:pl-20 lg:pr-20 gap-2'>
         <div className='lg:w-[70%] w-full flex flex-col p-5 justify-center text-center'>
-          <h1 className='text-xl md:text-3xl font-bold leading-none p-1'>
+          <h1 className='text-l md:text-3xl font-bold leading-none p-1 mt-10'>
             CONNECT
           </h1>
-          <h1 className='text-xl md:text-3xl font-bold leading-none p-1'>
+          <h1 className='text-l md:text-3xl font-bold leading-none p-1'>
             COLLABORATE
           </h1>
-          <h1 className='text-xl md:text-3xl font-bold leading-none p-1 mb-2'>
+          <h1 className='text-l md:text-3xl font-bold leading-none p-1 mb-2'>
             CONFERENCE
           </h1>
 
@@ -44,9 +44,40 @@ const HeroSectionMobileView = () => {
                 stroke-width='5'
               />
             </svg>
+
+            <svg
+              width='101'
+              height='85'
+              viewBox='0 0 111 95'
+              className='top-0 left-0 absolute z-0 mr-[41vw]'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <path
+                d='M0 92C42.8301 77.457 89.8459 24.6071 108 -6.97969e-06'
+                stroke='#408ACD'
+                stroke-opacity='0.65'
+                stroke-width='5'
+              />
+            </svg>
+
+            <svg
+              width='101'
+              height='131'
+              viewBox='0 0 111 141'
+              className='top-2 left-0 absolute z-0 mr-[41vw]'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <path
+                d='M0 138C61.4814 109.165 97.4919 34.5593 107.812 0.860839'
+                stroke='#408ACD'
+                stroke-opacity='0.19'
+                stroke-width='5'
+              />
+            </svg>
+
             <img src={img} alt='home' className='w-[520px] mt-2 z-10' />
             <div
-              className='lg:w-[20vw] shadow-md shadow-black lg:top-1 w-[20vw] lg:h-[15vw] z-0 h-[100px] absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] lg:block hidden border-[#0D7A9F] border-[solid] ml-[25vw] opacity-50'
+              className='shadow-md shadow-black left-40 bottom-80 w-[100vw] h-[84vw] z-0 absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-[10px] border-[1px] border-[#0D7A9F] border-[solid] ml-[25vw] opacity-60'
               style={{
                 background: 'rgb(7,153,200)',
                 background:
