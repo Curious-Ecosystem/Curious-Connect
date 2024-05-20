@@ -13,6 +13,7 @@ const TermsOfService = () => {
     <div>
       <div className='bg-gradient min-h-screen'>
         <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+
           <div className='  h-16 gap-4 flex flex-row  items-center font-extrabold  mb-4'>
             <h1 className='text-5xl font-light text-gray-100 '>Terms of Services</h1>
           </div>
