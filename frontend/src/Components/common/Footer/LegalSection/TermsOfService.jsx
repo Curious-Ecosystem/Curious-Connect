@@ -14,11 +14,6 @@ const TermsOfService = () => {
       <div className='bg-gradient min-h-screen'>
         <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
           <div className='  h-16 gap-4 flex flex-row  items-center font-extrabold  mb-4'>
-            <img
-              src="./src/assets/Landing-Page-Assets/CDC.jpg"
-              className='h-16 w-16 rounded-full'
-              alt='logo'
-            />
             <h1 className='text-5xl font-light text-gray-100 '>Terms of Services</h1>
           </div>
           <div className='h-fit p-5  flex flex-col items-center pb-0'>
