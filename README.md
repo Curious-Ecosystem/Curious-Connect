@@ -52,4 +52,17 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ##
 We appreciate your contributions and look forward to collaborating with you!
 
+ 
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ 
+
+![Contributors](https://contrib.rocks/image?repo=Curious-Ecosystem/Curious-Connect)
+
+
+</div>
+
+
+
+
 Thank you for contributing to our project! 🚀
