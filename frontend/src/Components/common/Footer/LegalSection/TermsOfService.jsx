@@ -13,6 +13,7 @@ const TermsOfService = () => {
     <div>
       <div className='bg-gradient min-h-screen'>
         <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+
           <div className='  h-16 gap-4 flex flex-row  items-center font-extrabold  mb-4'>
             <img
               src="./src/assets/Landing-Page-Assets/CDC.jpg"
