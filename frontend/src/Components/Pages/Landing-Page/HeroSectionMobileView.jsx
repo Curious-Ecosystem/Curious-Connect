@@ -9,7 +9,7 @@ const HeroSectionMobileView = () => {
     <div>
       <div className='justify-center tracking-wide items-center text-cyan-50 font-bold flex flex-col md:flex-row lg:pl-20 lg:pr-20 gap-2'>
         <div className='lg:w-[70%] w-full flex flex-col p-5 justify-center text-center'>
-          <h1 className='text-lg md:text-3xl font-bold leading-5 p-1 mt-10'>
+          <h1 className='text-lg md:text-3xl font-bold leading-5 p-1 mt-2'>
             CONNECT
           </h1>
           <h1 className='text-lg md:text-3xl font-bold leading-5 p-1'>
@@ -34,7 +34,7 @@ const HeroSectionMobileView = () => {
               width='101'
               height='85'
               viewBox='0 0 111 95'
-              className='top-0 left-0 absolute z-0 mr-[41vw] md:hidden'
+              className='top-0 left-0 absolute z-0 mr-[41vw]'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'>
               <path
@@ -49,7 +49,7 @@ const HeroSectionMobileView = () => {
               width='101'
               height='131'
               viewBox='0 0 111 141'
-              className='top-2 left-0 absolute z-0 mr-[41vw] md:hidden'
+              className='top-2 left-0 absolute z-0 mr-[41vw]'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'>
               <path
@@ -62,7 +62,7 @@ const HeroSectionMobileView = () => {
 
             <img src={img} alt='home' className='w-[520px] mt-2 z-10' />
             <div
-              className='shadow-md shadow-black right-0 top-0 w-[5.5rem] h-[5.5rem] md:hidden z-0 absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-bl-[10px] border-[1px] border-r-0 border-t-0 border-[#0D7A9F] border-[solid] opacity-60'
+              className='shadow-md shadow-black right-0 top-0 w-[5.5rem] h-[5.5rem] z-0 absolute shadow-[rgba(0, 0, 0, 0.25)] shadow-[0px 4px 4px] rounded-bl-[10px] border-[1px] border-r-0 border-t-0 border-[#0D7A9F] border-[solid] opacity-60'
               style={{
                 background: 'rgb(7,153,200)',
                 background:

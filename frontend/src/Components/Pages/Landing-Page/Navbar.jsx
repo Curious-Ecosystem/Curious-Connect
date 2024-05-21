@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <div className='h-20 flex gap-20 text-white items-center justify-between pt-8 md:px-20 px-2 relative'>
       <div className='flex items-center gap-6'>
-        <img src={logo} className='size-16 rounded-full ' />
+        <img src={logo} className='size-16 rounded-full z-10' />
         <span className='text-center font-bold'>
           Curious<span className='text-blue-400'> Connect</span>
         </span>
