@@ -1,5 +1,34 @@
 import React from 'react';
 
+import videoConf from '../../../../assets/About-Page-Assets/videoConf.png';
+import screenShare from '../../../../assets/About-Page-Assets/screenShared.svg';
+import chatMsg from '../../../../assets/About-Page-Assets/chatMsg.svg';
+import encrypt from '../../../../assets/About-Page-Assets/encrypt.svg';
+import customMeet from '../../../../assets/About-Page-Assets/customMeet.svg';
+
+const curiousFeatures = [
+  {
+    'name': 'High-quality video conferencing',
+    src: videoConf,
+  },
+  {
+    'name': 'Screen sharing capabilities',
+    src: screenShare,
+  },
+  {
+    'name': 'Real-time chat and messaging',
+    src: chatMsg,
+  },
+  {
+    'name': 'Secure end-to-end encryption',
+    src: encrypt,
+  },
+  {
+    'name': 'Customizable meeting settings',
+    src: customMeet,
+  },
+]
+
 function AboutPage() {
   return (
     <div>
@@ -28,17 +57,22 @@ function AboutPage() {
             <h2 className='text-2xl font-semibold text-gray-900 mb-4'>
               Key Features
             </h2>
-            <ul className='list-disc list-inside text-lg text-gray-700'>
-              <li>High-quality video conferencing</li>
-              <li>Screen sharing capabilities</li>
-              <li>Real-time chat and messaging</li>
-              <li>Secure end-to-end encryption</li>
-              <li>Customizable meeting settings</li>
+            <ul className='list-none list-inside text-lg flex flex-wrap justify-center text-center text-gray-700'>
+              {curiousFeatures.map((i, key) => {
+                return (
+                  <li key={key} className='w-48 mb-6 flex justify-center items-center flex-col'>
+                    <img className='h-28 mb-2' src={i.src} alt={i.name} />
+                    <span>
+                      {i.name}
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
