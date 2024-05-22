@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const dataArray = [
   {
@@ -43,36 +43,46 @@ const PrivacyPolicyPage = () => {
     <>
       <div className='bg-gradient'>
         <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
-          <h1 className='text-2xl md:text-3xl lg:text-4xl text-center font-medium text-gray-100 mb-8'>
+          <h1 className='text-3xl md:text-4xl lg:text-5xl text-center font-semibold text-[#2596be] mb-8'>
             Privacy Policy
           </h1>
+
           <div className=''>
             {dataArray.map((data, index) => (
-              <div
+              <motion.div
                 key={index}
-                className='shadow-md cursor-pointer py-2 px-3 bg-white mt-8 rounded-md'>
+                className='shadow-md cursor-pointer py-2 px-3 bg-white mt-8 rounded-md'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <div
                   className='flex flex-row justify-between items-center'
-                  onClick={() => toggleBtn(index)}>
-                  <p className='text-sm md:text-lg text-[#353b48] font-bold tracking-normal md:tracking-wider'>
+                  onClick={() => toggleBtn(index)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <p className='text-lg md:text-xl text-[#353b48] font-bold tracking-normal md:tracking-wider'>
                     {data.title}
                   </p>
                   <div>
                     <span className='text-xl md:text-3xl text-[#2f3640]'>
-                      {activeIndex === index ? `-` : `+`}
+                      {activeIndex === index ? '-' : '+'}
                     </span>
                   </div>
                 </div>
-                {activeIndex === index ? (
-                  <div className='py-5'>
-                    <p className='text-[#718093] text-xs sm:text-sm md:text-base leading-6 sm:leading-7 md:leading-8 tracking-wide md:tracking-wider text-justify px-3'>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className='overflow-hidden'
+                  >
+                    <p className='text-[#718093] text-sm sm:text-base leading-6 sm:leading-7 md:leading-8 tracking-wide md:tracking-wider text-justify px-3'>
                       {data.para}
                     </p>
-                  </div>
-                ) : (
-                  <></>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
