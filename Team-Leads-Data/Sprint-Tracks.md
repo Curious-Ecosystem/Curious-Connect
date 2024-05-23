@@ -2,8 +2,8 @@
    1. Landing Page
       1. Navigation
       2. HeroSection -> (Harshit)
-         1. InstantJoinRoom -> (Not Decided)
-      3. MeetingCards -> (Shantanu, BK-> Rishabh)
+         1. InstantJoinRoom -> (Rishabh)
+      3. MeetingCards -> (Sheetal)
       4. Features -> (Surya)
       5. OurTeam -> (Dhruv)
-      6. Footer -> (Nandan, BK-> Harshit)
+      6. Footer -> (Aman) 
