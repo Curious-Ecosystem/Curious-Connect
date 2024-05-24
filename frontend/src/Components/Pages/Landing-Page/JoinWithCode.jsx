@@ -3,8 +3,8 @@ import img2 from '../../../assets/Landing-Page-Assets/refresh.png';
 const JoinWithCode = () => {
   return (
     <div className='flex tracking-wide justify-center mb-20 items-center px-16 py-6 lg:m-10 m-3 font-bold text-white normal rounded-xl bg-transparent border-2 border-zinc-400 max-md:px-5'>
-      <div className='flex gap-5 w-full max-w-screen-lg max-md:flex-wrap max-md:max-w-[500px]'>
-        <div className='flex-auto my-auto text-xl whitespace-nowrap'>
+      <div className='flex gap-5 w-full max-w-screen-lg max-md:flex-wrap max-md:justify-center max-md:max-w-[500px]'>
+        <div className='flex-auto my-auto text-xl whitespace-nowrap text-center'>
           Paste the meeting code
         </div>
         <input
