@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -27,8 +29,7 @@ const SignIn = () => {
     });
 
     if (response.ok) {
-      const data = await response.json();
-      console.log(data);
+      navigate('/createMeeting');
     } else {
       console.log('Failed to login');
     }
