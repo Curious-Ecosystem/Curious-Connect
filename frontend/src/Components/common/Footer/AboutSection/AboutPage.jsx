@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import encrypt from '../../../../assets/About-Page-Assets/encrypt.svg';
 import chatMsg from '../../../../assets/About-Page-Assets/chatMsg.svg';
@@ -76,6 +77,8 @@ const AboutPage = () => {
 
   const sliderStyle = { cursor: 'grab' };
 
+  // const aboutHeading= document.querySelector('.aboutHeading');
+
   return (
     <>
       <style>
@@ -112,8 +115,18 @@ const AboutPage = () => {
       <div className='bg-gradient min-h-screen flex items-center justify-center'>
         <div className='sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-12 sm:px-5 md:px-6 lg:px-8 h-full '>
           <div className='mb-10'>
-            <h1 className='aboutHeading'>Our Mission</h1>
-            <div className='space-y-5 text-center'>
+            <motion.h1
+              className='aboutHeading'
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.58 }}>
+              Our Mission
+            </motion.h1>
+            <motion.div
+              className='space-y-5 text-center'
+              initial={{ opacity: 0.8, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}>
               <p className='tracking-wider text-3xl md:text-4xl lg:text-6xl mb-6 text-blue-400 leading-tight'>
                 Empowering teams to{' '}
                 <span className='text-gray-100'>
@@ -131,9 +144,19 @@ const AboutPage = () => {
                 <br /> their <span className='text-gray-100'>goals</span>{' '}
                 effortlessly.
               </p>
-            </div>
-            <h1 className='aboutHeading text-gray-800'>Our Identity</h1>
-            <div className='bg-white rounded-lg shadow-md p-6 max-h-full max-w-full '>
+            </motion.div>
+            <motion.h1
+              className='aboutHeading text-gray-800'
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.58 }}>
+              Our Identity
+            </motion.h1>
+            <motion.div
+              className='bg-white rounded-lg shadow-md p-6 max-h-full max-w-full'
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}>
               <div className='flex flex-col gap-3 text-lg text-gray-800 text-justify'>
                 <p>
                   <span className='font-bold text-[#2563eb]'>
@@ -159,10 +182,20 @@ const AboutPage = () => {
                   online and unlock new levels of productivity and engagement.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <h2 className='aboutHeading'>Key Features</h2>
-          <div className='bg-white rounded-lg shadow-md p-6 max-h-full'>
+          <motion.h2
+            className='aboutHeading'
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.58 }}>
+            Key Features
+          </motion.h2>
+          <motion.div
+            className='bg-white rounded-lg shadow-md p-6 max-h-full'
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}>
             <Slider {...settings}>
               {curiousFeatures.map((feature, index) => (
                 <div
@@ -187,7 +220,7 @@ const AboutPage = () => {
                 </div>
               ))}
             </Slider>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
