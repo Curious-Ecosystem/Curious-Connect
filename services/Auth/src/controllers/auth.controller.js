@@ -8,7 +8,7 @@ async function signup(req, res) {
     const { name, email, password } = req.body;
     
     //Check if input is as expected or not
-    if (!email || !password || !email) {
+    if (!name || !password || !email) {
       res.json (errorHadnler(401,'All fields must be filled'))
       return
     }
