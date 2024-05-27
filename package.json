@@ -33,6 +33,8 @@
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.23.1",
     "zod": "^3.23.8"
+    "react-icons": "^5.2.1",
+
   },
   "devDependencies": {
     "prettier": "^3.2.5"

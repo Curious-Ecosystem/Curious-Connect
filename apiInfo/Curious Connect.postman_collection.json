@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "1b5dc320-ab4a-4be7-9cd8-1b6eb536e329",
+		"name": "Curious Connect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34960853"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"James\",\r\n\"email\" : \"James@example.com\" ,\r\n\"password\" : \"example@password\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/api/sign-up",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"api",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"James@example.com\",\r\n\"password\": \"example@password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/api/sign-in",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"api",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
