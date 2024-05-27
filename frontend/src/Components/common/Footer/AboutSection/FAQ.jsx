@@ -28,6 +28,37 @@ const FAQ = () => {
       answer:
         'While Curious Connect is primarily designed for professional use, individuals can also use it for personal video calls or online gatherings.',
     },
+    {
+      question: 'How does Curious Connect support students and organizations?',
+      answer:
+        'Curious Connect provides a platform for live streaming sessions where students can receive personalized guidance and support. Organizations can use it to conduct training, workshops, and seminars, enabling effective knowledge transfer and skill development.',
+    },
+    {
+      question: ' How can I join a live streaming session on Curious Connect?',
+      answer:
+        'You can join a live streaming session by registering on the Curious Connect platform. Once registered, you can browse upcoming sessions, register for those that interest you, and join using the provided link.',
+    },
+    {
+      question: 'Can I host my own live streaming sessions on Curious Connect?',
+      answer:
+        'Yes, you can host your own sessions. To become a host, sign up on Curious Connect, complete your profile, and follow the instructions to create and schedule live streaming sessions.',
+    },
+    {
+      question: ' Can sessions be recorded for later viewing?',
+      answer:
+        'Yes, sessions can be recorded and saved for later viewing. Hosts have the option to enable recording for their sessions, allowing participants to access the content at their convenience.',
+    },
+    {
+      question: 'How do I get support if I encounter issues?',
+      answer:
+        'If you encounter any issues, you can reach out to our support team via the help section on the Curious Connect platform. We also have a comprehensive FAQ and knowledge base to assist with common questions and troubleshooting.',
+    },
+    {
+      question:
+        ' How can I provide feedback or suggest improvements for Curious Connect?',
+      answer:
+        'We welcome feedback and suggestions! You can provide feedback through our platform or by opening an issue on our GitHub repository.',
+    },
   ];
   const [openIndex, setOpenIndex] = useState(null);
 
