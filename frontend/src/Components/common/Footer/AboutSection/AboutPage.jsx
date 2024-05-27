@@ -113,7 +113,7 @@ const AboutPage = () => {
         `}
       </style>
       <div className='bg-gradient min-h-screen flex items-center justify-center'>
-        <div className='sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-12 sm:px-5 md:px-6 lg:px-8 h-full '>
+        <div className='max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-12 sm:px-5 md:px-6 lg:px-8 h-full '>
           <div className='mb-10'>
             <motion.h1
               className='aboutHeading'
