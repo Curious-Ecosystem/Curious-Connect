@@ -85,8 +85,8 @@ const AboutPage = () => {
             margin-bottom: 1rem;
             letter-spacing: widest;
             color: #f3f4f6;
-            font-weight: 300;
-            text-align: center;
+            font-weight: 700;
+            text-align: center;            
           }          
           .center-slide {
             transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -110,11 +110,11 @@ const AboutPage = () => {
         `}
       </style>
       <div className='bg-gradient min-h-screen flex items-center justify-center'>
-        <div className='max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 h-full '>
+        <div className='sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-12 sm:px-5 md:px-6 lg:px-8 h-full '>
           <div className='mb-10'>
             <h1 className='aboutHeading'>Our Mission</h1>
             <div className='space-y-5 text-center'>
-              <p className='tracking-wider text-6xl mb-6 text-blue-400 leading-tight'>
+              <p className='tracking-wider text-3xl md:text-4xl lg:text-6xl mb-6 text-blue-400 leading-tight'>
                 Empowering teams to{' '}
                 <span className='text-gray-100'>
                   <Typewriter
@@ -133,14 +133,16 @@ const AboutPage = () => {
               </p>
             </div>
             <h1 className='aboutHeading text-gray-800'>Our Identity</h1>
-            <div className='bg-white rounded-lg shadow-md p-6 max-h-full'>
-              <div className='flex flex-col gap-5 text-lg text-gray-800 text-justify'>
+            <div className='bg-white rounded-lg shadow-md p-6 max-h-full max-w-full '>
+              <div className='flex flex-col gap-3 text-lg text-gray-800 text-justify'>
                 <p>
                   <span className='font-bold text-[#2563eb]'>
                     Curious Connect{' '}
                   </span>
                   is your go-to platform for revolutionizing virtual
                   collaboration. <br />
+                </p>
+                <p>
                   Designed by{' '}
                   <span className='font-bold text-[#2563eb]'>
                     Curious Ecosystem
