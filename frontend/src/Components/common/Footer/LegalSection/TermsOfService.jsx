@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 
 const dataArray = [
   {
@@ -39,44 +40,53 @@ const TermsOfService = () => {
   };
 
   return (
-    <div>
-      <div className='bg-gradient min-h-screen'>
-        <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
-          <h1 className='text-2xl md:text-3xl lg:text-4xl text-center font-medium text-gray-100 mb-8'>
-            Terms of Service
-          </h1>
-          <div>
-            {dataArray.map((data, index) => (
+    <motion.div // Wrap with motion.div for entry animation
+      initial={{ opacity: 0, y: 60 }} // Initial animation properties
+      animate={{ opacity: 10, y: 5 }} // Animation when component mounts
+      transition={{ duration: 2 }} // Transition duration
+      className='min-h-screen' style={{ backgroundColor: '#1d2026' }}>
+      <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl text-center font-semibold text-[#2596be] mb-8'>
+          Terms of Service
+        </h1>
+        <div>
+          {dataArray.map((data, index) => (
+            <div
+              key={index}
+              className={`shadow-lg cursor-pointer py-2 px-4 bg-white mt-6 rounded-lg transform transition-transform duration-300 hover:scale-105 ${
+                activeIndex === index ? 'animate-slideDown' : ''
+              }`}>
               <div
-                key={index}
-                className='shadow-md cursor-pointer py-2 px-3 bg-white mt-8 rounded-md'>
-                <div
-                  className='flex flex-row justify-between items-center'
-                  onClick={() => toggleBtn(index)}>
-                  <p className='text-sm md:text-lg text-[#353b48] font-bold tracking-normal md:tracking-wider'>
-                    {data.title}
-                  </p>
-                  <div>
-                    <span className='text-xl md:text-3xl text-[#2f3640]'>
-                      {activeIndex === index ? `-` : `+`}
-                    </span>
-                  </div>
+                className='flex justify-between items-center'
+                onClick={() => toggleBtn(index)}>
+                <p className='text-lg md:text-xl font-semibold text-gray-800'>
+                  {data.title}
+                </p>
+                <div>
+                  <span className='text-xl md:text-2xl text-gray-600'>
+                    {activeIndex === index ? '-' : '+'}
+                  </span>
                 </div>
-                {activeIndex === index ? (
-                  <div className='py-5'>
-                    <p className='text-[#718093] text-xs sm:text-sm md:text-base leading-6 sm:leading-7 md:leading-8 tracking-wide md:tracking-wider text-justify px-3'>
-                      {data.para}
-                    </p>
-                  </div>
-                ) : (
-                  <></>
-                )}
               </div>
-            ))}
-          </div>
+              {activeIndex === index && (
+                <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className='overflow-hidden'
+                >
+                <div className='py-4'>
+                  <p className='text-gray-700 text-sm md:text-base leading-6'>
+                    {data.para}
+                  </p>
+                </div>
+                </motion.div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
