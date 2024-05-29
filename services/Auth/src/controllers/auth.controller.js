@@ -1,14 +1,14 @@
-const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("../models/user.model");
 const { errorHadnler } = require("../utils/error");
+const cookie = require('cookie'); // Import the 'cookie' library
 
 async function signup(req, res) {
   try {
     const { name, email, password } = req.body;
     
     //Check if input is as expected or not
-    if (!email || !password || !email) {
+    if (!name || !password || !email) {
       res.json (errorHadnler(401,'All fields must be filled'))
       return
     }
@@ -36,8 +36,24 @@ async function signup(req, res) {
 
     const token = user.generateAuthToken();
 
-    // getting user data format {name:"example", email:"dogeshdog@cheems.com"}
+    // Set Cookie in Header
+    res.setHeader(
+      'Set-Cookie',
+      cookie.serialize(
+        'token',
+        token,
+        {
+          httpOnly : true,
+          maxAge: 60 * 60 * 24,
+          sameSite: 'None',  // Restrict when the cookie is sent with cross-origin requests
+          secure: false,        // Send the cookie only over HTTPS in production
+          path: '/',
+        }
+      )
+    );
 
+    // getting user data format {name:"example", email:"dogeshdog@cheems.com"}
+  
     const userResponse = user.getUserData();
 
     return res.status(200).json({ ...userResponse, token });
@@ -78,6 +94,22 @@ async function signin(req, res, next) {
     // generating jwt token;
 
     const token = user.generateAuthToken();
+
+    // Set Cookie in Header
+    res.setHeader(
+      'Set-Cookie',
+      cookie.serialize(
+        'token',
+        token,
+        {
+          httpOnly : true,
+          maxAge: 60 * 60 * 24,
+          sameSite: 'None',  // Restrict when the cookie is sent with cross-origin requests
+          secure: false,        // Send the cookie only over HTTPS in production
+          path: '/',
+        }
+      )
+    );
 
     const userResposne = user.getUserData();
 
