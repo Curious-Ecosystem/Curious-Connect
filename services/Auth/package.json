@@ -5,12 +5,14 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cookie": "^0.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "firebase-admin": "^12.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.3"
+    "mongoose": "^8.3.3",
+    "zod": "^3.23.8"
   },
   "scripts": {
     "dev": "nodemon index.js"
