@@ -73,7 +73,7 @@ const SignIn = () => {
           <a href='#' className="self-start underline ml-2 mt-2 text-[13px] text-[#F06B48]">
             Forgot Password?
           </a>
-          <div className="justify-center cursor-pointer hover:bg-transparent hover:border-[2px] hover:border-[#F06B48] self-center px-16 py-3 mt-2 text-2xl font-bold text-center text-white whitespace-nowrap bg-[#F06B48] rounded-full max-md:px-14 max-md:mt-8 max-md:mb-5" onClick={handleSubmit}>
+          <div className="justify-center cursor-pointer hover:bg-transparent border-[2px] hover:border-[2px] border-[#F06B48] hover:border-[#F06B48] self-center px-16 py-3 mt-2 text-2xl font-bold text-center text-white whitespace-nowrap bg-[#F06B48] rounded-full max-md:px-14 max-md:mt-8 max-md:mb-5" onClick={handleSubmit}>
             Login
           </div>
           <div className='flex gap-2 text-center text-white mt-5'>

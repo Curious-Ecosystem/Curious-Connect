@@ -2,8 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import img from '../../../assets/Landing-Page-Assets/home-r.png';
 import JoinWithCode from './JoinWithCode';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const HeroSection = () => {
+  const [login, setLogin] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    setLogin(true);
+    navigate('/signin');
+  }
+
   return (
     <div className="relative overflow-hidden">
       <div className="justify-center tracking-wide items-center text-cyan-50 font-bold flex flex-col md:flex-row lg:pl-20 lg:pr-20 gap-2">
@@ -49,7 +60,7 @@ const HeroSection = () => {
             </motion.p>
           </div>
 
-          <div className="flex gap-4 mt-5 m-2 md:gap-4 md:m-2 md:mt-5 justify-start">
+          <div className="flex gap-4 mt-5 m-2 md:gap-4 md:m-2 md:mt-5 justify-start" onClick={handleLogin}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
