@@ -10,7 +10,7 @@ const JoinWithCode = () => {
         <input
           className='justify-center lg:mr-20 md:w-fit lg:w-[300px] px-8 py-6 text-md whitespace-nowrap rounded-xl bg-zinc-800 max-md:px-5 '
           placeholder='abc-def-xyz'></input>
-        <div className='justify-center self-center p-3 text-md bg-[#077BE7] rounded-xl cursor-pointer hover:bg-transparent hover:border-[1px] hover:border-[#077BE7]'>
+        <div className='justify-center self-center p-3 text-md bg-[#077BE7] rounded-xl cursor-pointer hover:bg-transparent hover:border-[#077BE7]'>
           Join Room
         </div>
         <img

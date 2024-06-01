@@ -27,11 +27,13 @@
     "express": "^4.19.2",
     "fa-icons": "^0.2.0",
     "font-awesome-icons": "^1.6.0",
+    "hamburger-react": "^2.5.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "react-datepicker": "^6.9.0",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "scroll-lock": "^2.1.5"
   },
   "devDependencies": {
     "prettier": "^3.2.5"
