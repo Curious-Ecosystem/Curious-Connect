@@ -20,7 +20,22 @@ const Navbar = () => {
     funcArray.forEach((item) => {
       item(0);
     });
-    funcArray ;
+    switch (id) {
+      case 0:
+        setHome(1);
+        break;
+      case 1:
+        setAbout(1);
+        break;
+      case 2:
+        setContact(1);
+        break;
+      case 3:
+        setFaq(1);
+        break;
+      default:
+        break;
+    }
   };
 
   const selectedClass = 'font-semibold border-b-2 border-b-white pb-1';
@@ -50,6 +65,7 @@ const Navbar = () => {
               className={`p-4 border-b-slate-500 border-b w-[100%] text-center ${home ? selectedClass : ''}`}
               onClick={() => {
                 setActive(0);
+                handleNav(); // Close menu after selection
               }}
             >
               Home
@@ -60,6 +76,7 @@ const Navbar = () => {
               className={`p-4 border-b-slate-500 border-b w-[100%] text-center ${about ? selectedClass : ''}`}
               onClick={() => {
                 setActive(1);
+                handleNav(); // Close menu after selection
               }}
             >
               About
@@ -70,6 +87,7 @@ const Navbar = () => {
               className={`p-4 border-b-slate-500 border-b w-[100%] text-center ${contact ? selectedClass : ''}`}
               onClick={() => {
                 setActive(2);
+                handleNav(); // Close menu after selection
               }}
             >
               Contact
@@ -80,6 +98,7 @@ const Navbar = () => {
               className={`p-4 border-b-slate-500 border-b w-[100%] text-center ${faq ? selectedClass : ''}`}
               onClick={() => {
                 setActive(3);
+                handleNav(); // Close menu after selection
               }}
             >
               FAQ
