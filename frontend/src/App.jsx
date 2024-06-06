@@ -11,6 +11,7 @@ import CreateMeeting from './Pages/Create-Meeting-Page';
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
 import Navbar from './Components/Pages/Landing-Page/Navbar';
+import JoinRoomPage from './Pages/JoinRoomPage';
 
 const App = () => {
   return (
@@ -37,6 +38,10 @@ const App = () => {
           <Route
             path='/meetingDetails/meetingAvailaibility'
             element={<MeetingAvailability />}
+          />
+          <Route
+            path='/join'
+            element={<JoinRoomPage/>}
           />
         </Routes>
         <Footer />
