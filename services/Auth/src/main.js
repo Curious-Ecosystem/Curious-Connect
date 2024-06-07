@@ -27,6 +27,17 @@ async function server() {
   app.listen(config.PORT, () => {
     console.log(`server is running at: http://localhost:${config.PORT}`);
   });
+  app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
+    const stack = config.NODE_ENV === "development" ? err.stack : undefined;
+    return res.status(statusCode).json({
+      success: false,
+      statusCode,
+      message,
+      stack
+    });
+  });
 }
 
 module.exports = server;
