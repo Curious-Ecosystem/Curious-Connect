@@ -1,20 +1,20 @@
-import React from "react";
-import LandingHeader from "../Components/Pages/Landing-Page/LandingHeader";
-import JoinRoom from "../Components/Pages/Landing-Page/JoinRoom";
-import Feature from "../Components/Pages/Landing-Page/Feature";
-import MeetingCards from "../Components/Pages/Landing-Page/MeetingCards";
-import OurTeam from "../Components/Pages/Landing-Page/OurTeam";
-import Footer from "../Components/common/Footer";
+import React from 'react';
+
+import MeetingCards from '../Components/Pages/Landing-Page/MeetingCards';
+import OurProducts from '../Components/Pages/Landing-Page/OurProducts';
+import JoinRoom from './JoinRoom-Page';
+import HeroSection from '../Components/Pages/Landing-Page/HeroSection';
+import FeatureCardSection from '../Components/Pages/Landing-Page/FeatureCardSection';
+import JoinWithCode from '../Components/Pages/Landing-Page/JoinWithCode';
+import Navbar from '../Components/Pages/Landing-Page/Navbar';
 
 export const LandingPage = () => {
   return (
     <div>
-      <LandingHeader />
-      <JoinRoom />
+      <HeroSection />
       <MeetingCards />
-      <Feature />
-      <OurTeam />
-      <Footer />
+      <FeatureCardSection />
+      <OurProducts />
     </div>
   );
 };

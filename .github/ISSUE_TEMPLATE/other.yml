@@ -1,0 +1,34 @@
+name: Other
+description: Use this for any other question or issue. Please do not create blank issues
+title: "[OTHER]"
+labels: ["status: awaiting triage"]
+body:
+  - type: textarea
+    id: issuedescription
+    attributes:
+      label: What would you like to share or ask?
+      description: Provide a clear and concise explanation of your issue.
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have checked the existing [issues](https://github.com/Curious-Ecosystem/Curious-Connect/issues)."
+          required: true
+
+        - label: "I have read the [Contributing Guidelines](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CONTRIBUTING.md)"
+          required: true
+
+        - label: "I have read the [Code Of Conduct](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CODE_OF_CONDUCT.md)"
+          required: true
+        - label: "I joined onboarding group for knowledge flow and direct conversation and support from admins  [Curious Developers Community - Curious Connect](https://chat.whatsapp.com/FR0sVnpsSvL4J4l56vLdBN)"
+          required: true
+
+        - label: "The changes don't break the code"
+          required: true
+        - label: "Please attach the screenshots and video of the development work once it is done "
+          required: true
+        - label: "If you need any help please join the default  ([Google Meet Link](https://meet.google.com/bwp-aasw-xbk))"
+          required: true

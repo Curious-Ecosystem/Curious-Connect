@@ -1,0 +1,41 @@
+name: Feature Request 💡
+description: Have any new idea or new feature for LinksHub? Please suggest!
+title: "[Feature] <write a small description here>"
+labels: ["enhancement", "goal: addition", "priority: high"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of any alternative solution or features you've considered.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have checked the existing [issues](https://github.com/Curious-Ecosystem/Curious-Connect/issues)."
+          required: true
+
+        - label: "I have read the [Contributing Guidelines](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CONTRIBUTING.md)"
+          required: true
+
+        - label: "I have read the [Code Of Conduct](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CODE_OF_CONDUCT.md)"
+          required: true
+        - label: "I joined onboarding group for knowledge flow and direct conversation and support from admins  [Curious Developers Community - Curious Connect](https://chat.whatsapp.com/FR0sVnpsSvL4J4l56vLdBN)"
+          required: true
+
+        - label: "The changes don't break the code"
+          required: true
+        - label: "Please attach the screenshots and video of the development work once it is done "
+          required: true
+        - label: "If you need any help please join the default  ([Google Meet Link](https://meet.google.com/bwp-aasw-xbk))"
+          required: true
