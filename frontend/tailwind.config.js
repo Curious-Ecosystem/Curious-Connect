@@ -1,13 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js'
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", 'node_modules/flowbite-react/lib/esm/**/*.js'],
 
   theme: {
     extend: {
-
       screens: {
         sm: "640px",
         md: "768px",
@@ -39,9 +36,10 @@ export default {
       },
       colors: {
         borderclr: "#408ACD",
-      }
+      },
     },
   },
+
   plugins: [
     require('flowbite/plugin')
   ]
