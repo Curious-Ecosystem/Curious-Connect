@@ -93,7 +93,81 @@ const Navbar = () => {
               {item.label}
             </motion.span>
           </Link>
-        ))}
+        </div>
+      </div>
+      <div className='hidden lg:flex justify-between gap-28 items-center z-20'>
+        <Link to={'/'}>
+          <span
+            className={home ? selectedClass : ''}
+            onClick={() => {
+              setActive(0);
+            }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/wmwqvixz.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
+            Home
+          </span>
+        </Link>
+        <Link to={'/aboutUs'}>
+          <span
+            className={about ? selectedClass : ''}
+            onClick={() => {
+              setActive(1);
+            }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/jnzhohhs.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
+            About
+          </span>
+        </Link>
+        <Link to={'/contactUs'}>
+          <span
+            className={contact ? selectedClass : ''}
+            onClick={() => {
+              setActive(2);
+            }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/srsgifqc.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
+            Contact
+          </span>
+        </Link>
+        <Link to={'/faq'}>
+          <span
+            className={faq ? selectedClass : ''}
+            onClick={() => {
+              setActive(3);
+            }}>
+            <lord-icon
+              style={{
+                height: '20px',
+                width: '20px',
+                paddingTop: '2px',
+              }}
+              src='https://cdn.lordicon.com/pyoiumqr.json'
+              trigger='hover'
+              colors='primary:#ffffff'></lord-icon>{' '}
+            FAQ
+          </span>
+        </Link>
       </div>
     </nav>
   );
