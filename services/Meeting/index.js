@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const config = require('./config');
+const meetingRoutes = require('./routes/meetingRoute');
 
 const app = express();
 
@@ -9,6 +10,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use('/meeting',meetingRoutes);
 
 const port = config.PORT;
 const dbUri = config.DB_URI;
