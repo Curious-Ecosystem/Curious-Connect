@@ -19,6 +19,7 @@ export default {
         gradient: "linear-gradient(243.43deg, #1F2329 0.37%, #1D2026 100%)",
         gradient2: "linear-gradient(190.43deg, #0799C8 30%, #113F51 60%)",
         gradient3: "linear-gradient(210.43deg, #0799C8 5%, #113F51 31%)",
+        gradient4: "linear-gradient(210.43deg, #3730a3 1%, #1F2329 41%)",
       },
       backgroundSize: {
         auto: "auto",
