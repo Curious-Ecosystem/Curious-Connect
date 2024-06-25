@@ -1,16 +1,15 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/user.model");
-const { errorHadnler } = require("../utils/error");
+const { errorHandler } = require("../utils/error");
 const cookie = require('cookie'); // Import the 'cookie' library
 
-async function signup(req, res) {
+async function signup(req, res, next) {
   try {
     const { name, email, password } = req.body;
     
     //Check if input is as expected or not
     if (!name || !password || !email) {
-      res.json (errorHadnler(401,'All fields must be filled'))
-      return
+      return next(errorHandler(401,'All fields must be filled'))
     }
     
     let user = await User.findOne({ email });
@@ -20,8 +19,7 @@ async function signup(req, res) {
     // if user already exists;
 
     if (user) {
-      res.json(errorHadnler(400, "user already exists"));
-      return
+      return next(errorHandler(400, "user already exists"));
     }
 
     user = new User({
@@ -58,7 +56,7 @@ async function signup(req, res) {
 
     return res.status(200).json({ ...userResponse, token });
   } catch (error) {
-    res.status(500).json({ ...error });
+    next(error);
   }
 }
 
@@ -68,18 +66,15 @@ async function signin(req, res, next) {
 
   //Check if input is as expected or not
   if (!email || !password) {
-    res.json (errorHadnler(401,'All fields must be filled'))
-    return
+    return next(errorHandler(401,'All fields must be filled'))
   }
 
     let user = await User.findOne({ email });
-    // console.log(user);
 
     // checking whether user exists or not;
 
     if (!user) {
-      res.json(errorHadnler(404, "User does not exists"));
-      return
+      return next(errorHandler(404, "User does not exists"));
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -87,8 +82,7 @@ async function signin(req, res, next) {
     // if the password not matched;
 
     if (!isMatch) {
-      res.json(errorHadnler(401, "Invalid password"));
-      return
+      return next(errorHandler(401, "Invalid password"));
     }
 
     // generating jwt token;
@@ -115,8 +109,7 @@ async function signin(req, res, next) {
 
     return res.status(200).json({ token, userResposne });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ ...error });
+    next(error);
   }
 }
 
