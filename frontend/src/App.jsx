@@ -12,12 +12,13 @@ import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
 import Navbar from './Components/Pages/Landing-Page/Navbar';
 import JoinRoomPage from './Pages/JoinRoomPage';
+import MeetingRoomPage from './Pages/MeetingRoomPage';
 
 const App = () => {
   return (
     <div className='bg-gradient'>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<LandingPage />} />
           {/* about section */}
@@ -43,8 +44,12 @@ const App = () => {
             path='/join'
             element={<JoinRoomPage/>}
           />
+          <Route
+            path='/room/:roomId'
+            element={<MeetingRoomPage/>}
+          />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
