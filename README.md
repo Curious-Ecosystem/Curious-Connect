@@ -10,7 +10,6 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 </p>
 
 ## 📑Table of Contents
-
 - [Getting Started](#getting-started)
 - [How Can I Contribute?](#how-can-i-contribute)
   - [Team Onboarding](#team-onboarding)
