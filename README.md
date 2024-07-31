@@ -43,6 +43,7 @@ By following these steps, you'll have a local copy of the Curious Connect projec
 ### 📜Contributing Guidelines
 
 - Before you start contributing, please take a moment to read our [Contributing guidelines](./CONTRIBUTING.md) to ensure a smooth and effective contribution process.
+- Then Start the Journey of Open Source
 
 ## 📝Code of Conduct
 
