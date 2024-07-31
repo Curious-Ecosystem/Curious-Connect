@@ -36,7 +36,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1, rotate: [0, -10, 0, 10, 0], transition: { duration: 0.3 } }}
           />
         </Link>
-        <span className='text-center font-bold'>
+        <span className='font-bold text-xl md:text-3xl'>
           <span className='text-blue-400'>Curious</span> Connect
         </span>
       </div>
