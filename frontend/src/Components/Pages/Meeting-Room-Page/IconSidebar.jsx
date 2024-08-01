@@ -6,6 +6,7 @@ import { IoIosChatboxes, IoIosDisc  } from "react-icons/io";
 import { MdDraw } from "react-icons/md";
 import { IoExit } from "react-icons/io5";
 import { GiArtificialHive } from "react-icons/gi";
+import { FaVideo } from "react-icons/fa6";
 
 const IconSidebar = ({actions, values}) => {
     // State to keep track of the currently "disabled" button index
@@ -34,6 +35,7 @@ const IconSidebar = ({actions, values}) => {
         {icon : <FaHandPaper />, value : values.handRaised, action: actions.raiseHand, id:'handIcon'},
         {icon : <MdEmojiEmotions />, value : values.emojiVisible, action: actions.openEmoji, id:'emojiIcon'},
         {icon : <FaMicrophone />, value : values.microphoneOpen, action: actions.openMicrophone, id:'microphoneIcon'},
+        { icon: <FaVideo />, value: values.cameraOpen, action: actions.openCamera, id: 'cameraIcon' },
         {icon : <PiMonitorFill />, value : values.screenShareOpen, action: actions.openScreenShare, id:'monitorIcon'},
         {icon : <IoIosChatboxes />, value : values.chatOpen, action : actions.openChatWindow, id:'chatIcon'},
         {icon : <GiArtificialHive />, value : values.gptOpen, action: actions.openGptWindow, id:'gptIcon'},
@@ -45,9 +47,9 @@ const IconSidebar = ({actions, values}) => {
 
     // Rendering buttons
     return (
-        <div className='px-2 py-8 flex flex-col items-stretch justify-between'>
+        <div className='pl-5 py-5 flex flex-col items-stretch justify-between'>
             {allBtns.map((btn) => (
-                <button
+                <button 
                     key={btn.id}
                     onClick={btn.action}
                     className={`p-2 rounded-lg border-2 ${btn.value ? 'text-blue-700 border-gray-700 cursor-pointer' : 'text-borderclr border-borderclr'}`}
