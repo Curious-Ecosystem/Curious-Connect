@@ -58,6 +58,17 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ## Our Contributors
 We appreciate your contributions and look forward to collaborating with you!
 
+## Issue Resolved By 
+### 1. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
+<ol>
+    <li>User Avatar for Meeting Participants</li>
+    <li>UI for Multiple Participants</li>
+    <li>Implemented Random Avatar Color For Each Participants</li>
+    <li>Merged Joining Window with Meeting Room UI</li>
+    <li>Enhanced Functionalities of Joining Window</li>
+    <li>Added Feature for Selecting User Media (i.e. Camera & Microphone) Dynamically.</li>
+    <li>Enhanced Functionalities of Meeting Room Page.</li>
+</ol>
  
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
