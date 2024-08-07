@@ -59,7 +59,7 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 We appreciate your contributions and look forward to collaborating with you!
 
 ## Issue Resolved By 
-# 1. [Domeshwer Sahu](https://www.gihub.com/domesh-is-Coding) : 
+### 1. [Domeshwer Sahu](https://www.gihub.com/domesh-is-Coding) : 
 <ol>
     <li>User Avatar for Meeting Participants</li>
     <li>UI for Multiple Participants</li>
