@@ -11,9 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@material-tailwind/react": "^2.1.9",
     "@remixicon/react": "^4.2.0",
     "express": "^4.19.2",
+    "firebase": "^10.12.0",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.9.0",
     "framer-motion": "^11.2.6",
@@ -26,6 +28,7 @@
     "react-icons": "^5.2.1",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.23.1",
+    "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
   },
