@@ -36,7 +36,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1, rotate: [0, -10, 0, 10, 0], transition: { duration: 0.3 } }}
           />
         </Link>
-        <span className='text-center font-bold'>
+        <span className='font-bold text-xl md:text-3xl'>
           <span className='text-blue-400'>Curious</span> Connect
         </span>
       </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
         className={
           nav
             ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-gray-900 ease-in-out duration-500 bg-gradient z-50'
-            : 'fixed left-0 top-0 left-[-100%] ease-in-out duration-500'
+            : 'fixed top-0 left-[-100%] ease-in-out duration-500'
         }>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
