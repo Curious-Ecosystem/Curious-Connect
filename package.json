@@ -30,7 +30,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "react-datepicker": "^6.9.0",
-    "react-router-dom": "^6.23.1"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^3.2.5"
