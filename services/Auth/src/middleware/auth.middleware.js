@@ -15,7 +15,7 @@ const userauth = async (req, res, next) => {
 
     const user = await User.findOne({ _id: id });
 
-    if (!user) return res.status(401, "please login again");
+    if (!user) return next(errorHadnler(401, "please login again"));
 
     res.cookie("token", token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
 
