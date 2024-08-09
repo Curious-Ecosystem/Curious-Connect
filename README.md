@@ -74,6 +74,13 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ## Our Contributors
 We appreciate your contributions and look forward to collaborating with you!
 
+### 1. [Sheetal Tyagi :](https://github.com/Sheetal-04)
+
+<ol>
+<li>Implemented Meeting Cards.<li>
+<li>Implemented Scrollbar based on theme<li>
+<li>Implemented Smooth Scrolling<li>
+</ol>
 
 ## Issue Resolved By 
 ### 1. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
