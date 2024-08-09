@@ -6,6 +6,7 @@ import JoinRoom from './JoinRoom-Page';
 import HeroSection from '../Components/Pages/Landing-Page/HeroSection';
 import FeatureCardSection from '../Components/Pages/Landing-Page/FeatureCardSection';
 import JoinWithCode from '../Components/Pages/Landing-Page/JoinWithCode';
+import Login from './Login';
 import Navbar from '../Components/Pages/Landing-Page/Navbar';
 
 export const LandingPage = () => {
@@ -14,6 +15,7 @@ export const LandingPage = () => {
       <HeroSection />
       <MeetingCards />
       <FeatureCardSection />
+      <Login/>
       <OurProducts />
     </div>
   );
