@@ -23,33 +23,17 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 ## 🚀Getting Started
 
 ### Prerequisites
-
 - Ensure you have an IDE installed on your local machine.
-- Fork the repository
-- Clone your forked repository locally:
-```bash
-  git clone https://github.com/Curious-Ecosystem/Curious-Connect.git
 
-```
-- Change your directory to the project:
-```bash
-  cd CURIOUS-CONNECT
+1). Fork the repository on GitHub.
+2). Clone your forked repository locally:
+ `git clone https://github.com/Curious-Ecosystem/Curious-Connect.git`
+3). Change your directory to the project: `cd CURIOUS-CONNECT`
+4). For the instructions in the [Project Setup](docs/Project_Setup.md) documentation to install the rquired dependencies and set up your development environment. 
 
-```
+By following these steps, you'll have a local copy of the Curious Connect project ready for development. For more detailed information, refer to our [Documentation](docs/Overview.md)
 
-- For the instructions in the [Project Setup](docs/Project_Setup.md) documentation to install the rquired dependencies and set up your development environment.
 
-- Install the necessary dependencies:
-```bash
-  npm install
-```
-- Start the NodeJS server:
-
-- Start the development server
-```bash
- npm start
- ```
-- Open your browser and navigate to http://localhost:3000 to view the website
 ## 🤝How Can I Contribute?
 
 ### 🌟Team Onboarding
