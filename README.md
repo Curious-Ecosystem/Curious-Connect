@@ -106,7 +106,17 @@ We appreciate your contributions and look forward to collaborating with you!
 
 </ol>
 
- 
+
+### 2. [Ayush Kansal](https://github.com/ayush031)
+<ol>
+  <li>Enhanced UI Design for About Page using Framer-Motion</li>
+  <li>Added Header and Background Sparkle to the About Header</li>
+  <li>Integrated Marqee Effect to the Features Section</li>
+  <li>Added Investor Cards with Conditional Renderi</li>
+  <li>Integrated the Infinited Cards using Aceternity UI </li>
+  <li>Added Maps Address </li>
+</ol>
+
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
 
