@@ -58,6 +58,18 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ## Our Contributors
 We appreciate your contributions and look forward to collaborating with you!
 
+## Issue Resolved By
+
+### 1 [Aman Kumar Gupta :](https://github.com/AmanGupta2626)
+
+<ol>
+<li>Implemented Footer Section </li>
+<li>Implemented FAQ Section </li>
+<li>Implemented Signin/signup page  </li>
+<li>Implemented authentication using firebase </li>
+<li>Added caption part which convert speech to text </li>
+</ol>
+
  
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
