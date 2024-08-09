@@ -75,27 +75,24 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ## Our Contributors
 We appreciate your contributions and look forward to collaborating with you!
 
-## Issue Resolved By
-
-### 1 [Aman Kumar Gupta :](https://github.com/AmanGupta2626)
-
+# Issue Resolved By:
+### 1. [Aman Kumar Gupta :](https://github.com/AmanGupta2626)
 <ol>
-<li>Implemented Footer Section </li>
-<li>Implemented FAQ Section </li>
-<li>Implemented Signin/signup page  </li>
-<li>Implemented authentication using firebase </li>
-<li>Added caption part which convert speech to text </li>
-
-### 1. [Sheetal Tyagi :](https://github.com/Sheetal-04)
-
+  <li>Implemented Footer Section </li>
+  <li>Implemented FAQ Section </li>
+  <li>Implemented Signin/signup page  </li>
+  <li>Implemented authentication using firebase </li>
+  <li>Added caption part which convert speech to text </li>
+</ol>
+  
+### 2. [Sheetal Tyagi :](https://github.com/Sheetal-04)
 <ol>
-<li>Implemented Meeting Cards.<li>
-<li>Implemented Scrollbar based on theme<li>
-<li>Implemented Smooth Scrolling<li>
+  <li>Implemented Meeting Cards.</li>
+  <li>Implemented Scrollbar based on theme.</li>
+  <li>Implemented Smooth Scrolling.</li>
 </ol>
 
-## Issue Resolved By 
-### 1. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
+### 3. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
 <ol>
     <li>User Avatar for Meeting Participants</li>
     <li>UI for Multiple Participants</li>
@@ -107,7 +104,6 @@ We appreciate your contributions and look forward to collaborating with you!
 
 </ol>
 
- 
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
 
