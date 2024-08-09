@@ -42,6 +42,7 @@ By following these steps, you'll have a local copy of the Curious Connect projec
 
 ### 📜Contributing Guidelines
 
+
 - Before you start contributing, please take a moment to read our [Contributing guidelines](./CONTRIBUTING.md) to ensure a smooth and effective contribution process.
 
 ## 📝Code of Conduct
@@ -58,6 +59,23 @@ This project is licensed under the [BSD 4-Clause](./LICENSE.md) license.
 ## Our Contributors
 We appreciate your contributions and look forward to collaborating with you!
 
+## Issue Resolved By
+### 1. [Manpreet Kaur :](https://github.com/manpreet244)
+<ol>
+<li> Developed Chatwindow using sockets </li>
+<li>Added Emoji Picked  components </li>
+<li>Added reply section</li>
+<li>Enhanced UI of chatwindow></li>
+<li>Meeting cards section built up</li>
+<li>Hover effect on button using framer motion</li>
+<li>If emoji modal is open and if someone click outside the emoji modal but in chat window then emoji modal should be hide </li>
+<li>Chat window close event working issue resolved</li>
+<li>Implement show emoji feature in Meeting Room and it appear like this when user click on the emoji icon then it should appear below the participants with transition effect. </li>
+<li>Implement show emoji feature in Meeting Room and it appear like this when user click on the emoji icon then it should appear below the participants with transition effect. </li>
+<li>Add text In-call messages in front of the close button </li>
+<li> name of the receiver  make it small and change the color with some light color of the sender and receiver name</li>
+
+</ol>
  
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
