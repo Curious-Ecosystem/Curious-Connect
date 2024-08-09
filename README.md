@@ -58,6 +58,7 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
 ### 📜Contributing Guidelines
 
 - Before you start contributing, please take a moment to read our [Contributing guidelines](./CONTRIBUTING.md) to ensure a smooth and effective contribution process.
+- Then Start the Journey of Open Source
 
 ## 📝Code of Conduct
 
