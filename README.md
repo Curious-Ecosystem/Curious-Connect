@@ -50,6 +50,13 @@ Curious Connect is your go-to platform for revolutionizing virtual collaboration
  npm start
  ```
 - Open your browser and navigate to http://localhost:5173 to view the website
+
+
+## 🤵Author
+- [@Nandan Sir](https://github.com/Curious-Ecosystem)
+## 🤵Co-Author
+- [@Naman Sir](https://github.com/CDCNaman)
+
 ## 🤝How Can I Contribute?
 
 ### 🌟Team Onboarding
@@ -77,24 +84,22 @@ We appreciate your contributions and look forward to collaborating with you!
 ## Issue Resolved By
 
 ### 1 [Aman Kumar Gupta :](https://github.com/AmanGupta2626)
-
 <ol>
 <li>Implemented Footer Section </li>
 <li>Implemented FAQ Section </li>
 <li>Implemented Signin/signup page  </li>
 <li>Implemented authentication using firebase </li>
 <li>Added caption part which convert speech to text </li>
-
-### 1. [Sheetal Tyagi :](https://github.com/Sheetal-04)
-
-<ol>
-<li>Implemented Meeting Cards.<li>
-<li>Implemented Scrollbar based on theme<li>
-<li>Implemented Smooth Scrolling<li>
 </ol>
 
-## Issue Resolved By 
-### 1. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
+### 2. [Sheetal Tyagi :](https://github.com/Sheetal-04)
+<ol>
+  <li>Implemented Meeting Cards.</li>
+  <li>Implemented Scrollbar based on theme</li>
+  <li>Implemented Smooth Scrolling</li>
+</ol>
+
+### 3. [Domeshwer Sahu :](https://github.com/domesh-is-Coding) 
 <ol>
     <li>User Avatar for Meeting Participants</li>
     <li>UI for Multiple Participants</li>
@@ -103,11 +108,9 @@ We appreciate your contributions and look forward to collaborating with you!
     <li>Enhanced Functionalities of Joining Window</li>
     <li>Added Feature for Selecting User Media (i.e. Camera & Microphone) Dynamically.</li>
     <li>Enhanced Functionalities of Meeting Room Page.</li>
-
 </ol>
 
-
-### 2. [Ayush Kansal](https://github.com/ayush031)
+### 4. [Ayush Kansal](https://github.com/ayush031)
 <ol>
   <li>Enhanced UI Design for About Page using Framer-Motion</li>
   <li>Added Header and Background Sparkle to the About Header</li>
@@ -116,6 +119,15 @@ We appreciate your contributions and look forward to collaborating with you!
   <li>Integrated the Infinited Cards using Aceternity UI </li>
   <li>Added Maps Address </li>
 </ol>
+
+### 5. [Ujjwal](https://github.com/UjjwalSaini07)
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/209
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/216
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/220
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/221
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/230
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/237
+- https://github.com/Curious-Ecosystem/Curious-Connect/pull/238, 10+ More
 
 <h2 align = "center">Our Contributors❤️</h2>
 <div align = "center">
