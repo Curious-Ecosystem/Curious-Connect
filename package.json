@@ -18,6 +18,7 @@
     "install-mediasoup": "set MEDIASOUP_WORKER_BIN=./services/Media/Worker/mediasoup-worker.exe && yarn install"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@material-tailwind/react": "^2.1.9",
@@ -27,15 +28,15 @@
     "express": "^4.19.2",
     "fa-icons": "^0.2.0",
     "font-awesome-icons": "^1.6.0",
+    "framer-motion": "^10.12.8",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "react-datepicker": "^6.9.0",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
-    "yarn": "^1.22.22"
-
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "prettier": "^3.2.5"
