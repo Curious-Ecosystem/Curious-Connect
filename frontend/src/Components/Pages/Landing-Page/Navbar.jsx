@@ -27,12 +27,12 @@ const Navbar = () => {
   return (
     <>
       <nav className='h-20 flex gap-20 text-white items-center justify-between pt-8 md:px-20 px-2 relative'>
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-2'>
           {/* Wrap the logo image in a Link component */}
           <Link to="/" className="cursor-pointer">
             <motion.img
               src={logo}
-              className='size-16 rounded-full'
+              className='size-12 rounded-full'
               alt='logo'
               whileHover={{ scale: 1.1, rotate: [0, -10, 0, 10, 0], transition: { duration: 0.3 } }}
             />
@@ -83,7 +83,7 @@ const Navbar = () => {
             ))}
           </motion.div>
         </motion.div>
-        <div className='hidden lg:flex justify-between gap-28 items-center z-20'>
+        <div className='hidden lg:flex justify-between gap-20 items-center z-20'>
           {navItems.map((item) => (
             <Link to={item.path} key={item.id}>
               <motion.span
