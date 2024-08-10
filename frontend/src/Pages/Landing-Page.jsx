@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import MeetingCards from '../Components/Pages/Landing-Page/MeetingCards';
 import OurProducts from '../Components/Pages/Landing-Page/OurProducts';
 import JoinRoom from './JoinRoom-Page';
@@ -25,8 +24,8 @@ export const LandingPage = () => {
       {isMobile ? <HeroSectionMobileView /> : <HeroSection />}
       <MeetingCards />
       <FeatureCardSection />
-      <Login/>
       <OurProducts />
+      {/* <Login/> -- used when required make button to use that */}    
     </div>
   );
 };
