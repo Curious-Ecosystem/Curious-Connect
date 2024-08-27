@@ -8,6 +8,7 @@ import Footer from './Components/common/Footer/Footer';
 import PrivacyPolicyPage from './Components/common/Footer/LegalSection/PrivacyPolicyPage';
 import TermsOfService from './Components/common/Footer/LegalSection/TermsOfService';
 import CreateMeeting from './Pages/Create-Meeting-Page';
+import Register from "./Pages/SignUp-Page";
 import MeetingDetails from './Components/Pages/Meeting-Page/Meeting-Details';
 import MeetingAvailability from './Components/Pages/Meeting-Page/Meeting-Availability';
 import SignInPage from './Pages/SignIn-Page';
@@ -22,9 +23,10 @@ const App = () => {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           {/* about section */}
-          <Route path='/aboutUs' element={<AboutPage />} />
-          <Route path='/contactUs' element={<Contact />} />
-          <Route path='/faq' element={<FAQ />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/aboutUs" element={<AboutPage />} />
+          <Route path="/contactUs" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
 
           {/* legal section  */}
           <Route path='/PrivacyPolicyPage' element={<PrivacyPolicyPage />} />
