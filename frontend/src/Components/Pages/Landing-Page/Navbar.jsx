@@ -26,8 +26,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='h-20 flex gap-20 text-white items-center justify-between pt-8 md:px-20 px-2 relative'>
-        <div className='flex items-center gap-2'>
+      <nav className='h-24 flex gap-20 text-white items-center justify-between pt-6 md:px-20 px-2 relative border-b-2 border-blue-600'>
+        <div className='flex gap-2'>
           {/* Wrap the logo image in a Link component */}
           <Link to="/" className="cursor-pointer">
             <motion.img
@@ -39,7 +39,7 @@ const Navbar = () => {
           </Link>
 
           <span className='text-center font-bold' />
-          <span className='font-bold text-xl md:text-3xl'>
+          <span className='font-bold text-xl md:text-3xl pb-6'>
             <span className='text-blue-400'>Curious</span> Connect
           </span>
         </div>
@@ -66,12 +66,12 @@ const Navbar = () => {
             exit={{ opacity: 0, x: -50 }}
             className='flex flex-col gap-6 py-12'>
             <img src={logo} className='size-16 rounded-full mx-auto' alt='logo' />
+
             {navItems.map((item) => (
               <Link to={item.path} key={item.id}>
                 <motion.div
-                  className={`p-4 border-b-slate-500 border-b w-[100%] ${
-                    activeItem === item.id ? 'font-semibold border-b-2 border-b-white pb-1' : ''
-                  }`}
+                  className={`p-4  ${activeItem === item.id ? 'font-semibold pb-1' : ''
+                    }`}
                   onClick={() => {
                     setActive(item.id);
                     setNav(false); // Close the navbar after clicking a link
@@ -84,14 +84,15 @@ const Navbar = () => {
           </motion.div>
         </motion.div>
         <div className='hidden lg:flex justify-between gap-20 items-center z-20'>
+
           {navItems.map((item) => (
             <Link to={item.path} key={item.id}>
               <motion.span
-                className={`${
-                  activeItem === item.id ? 'font-semibold border-b-2 border-b-white pb-1' : ''
-                }`}
+                className={`${activeItem === item.id ? 'font-semibold pb-1' : ''
+                  } hover:bg-blue-600 hover:rounded transition-colors duration-300 inline-block h-10 w-16 `}
                 onClick={() => {
                   setActive(item.id);
+
                 }}
                 whileHover={{ scale: 1.05, x: 5 }}>
                 {item.label}
