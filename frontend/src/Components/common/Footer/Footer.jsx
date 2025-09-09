@@ -1,12 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+  };
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    if (emailError) {
+      setEmailError('');
+    }
+  };
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    setEmailError('');
+    setIsSubscribed(false);
+    if (!email.trim()) {
+      setEmailError('Please enter your email address');
+      return;
+    }
+    if (!validateEmail(email)) {
+      setEmailError('Please enter a valid email address');
+      return;
+    }
+    setIsSubscribed(true);
+    setEmail('');
+    console.log('Subscribing email:', email);
+    
+
+    setTimeout(() => {
+      setIsSubscribed(false);
+    }, 3000);
   };
 
   return (
@@ -34,17 +70,35 @@ const Footer = () => {
           Get the latest news, articles and resources directly in your Inbox
           weekly
         </div>
-        <div className='flex flex-wrap gap-5 mt-6'>
-          <input
-            type='text'
-            placeholder='Enter email..'
-            className='grow justify-center p-5 items-start w-[281.86px] h-[45.94px] text-[16px] leading-8 bg-[#FFFFFF] rounded-md text-black text-opacity-60 border-none max-md:pr-5'></input>
-          <a href='#'>
-            <button className='justify-center text-lg w-[115.94px] h-[45.94px] font-semibold tracking-wide leading-5 text-white whitespace-nowrap hover:border-[1px] hover:bg-transparent cursor-pointer hover:border-[#408ACD] bg-[#408ACD] rounded-[10px]'>
-              Subscribe
+        <form onSubmit={handleSubscribe} className='flex flex-col gap-2'>
+          <div className='flex flex-wrap gap-5 mt-6'>
+            <input
+              type='email'
+              value={email}
+              onChange={handleEmailChange}
+              placeholder='Enter email..'
+              className={`grow justify-center p-5 items-start w-[281.86px] h-[45.94px] text-[16px] leading-8 bg-[#FFFFFF] rounded-md text-black text-opacity-60 border-2 max-md:pr-5 ${
+                emailError ? 'border-red-500' : 'border-transparent'
+              }`}
+            />
+            <button 
+              type='submit'
+              className='justify-center text-lg w-[115.94px] h-[45.94px] font-semibold tracking-wide leading-5 text-white whitespace-nowrap hover:border-[1px] hover:bg-transparent cursor-pointer hover:border-[#408ACD] bg-[#408ACD] rounded-[10px] transition-all duration-200'
+            >
+              {isSubscribed ? 'Subscribed!' : 'Subscribe'}
             </button>
-          </a>
-        </div>
+          </div>
+          {emailError && (
+            <div className='text-red-400 text-sm mt-1 ml-1'>
+              {emailError}
+            </div>
+          )}
+          {isSubscribed && (
+            <div className='text-green-400 text-sm mt-1 ml-1'>
+              Thank you for subscribing! You'll receive our newsletter soon.
+            </div>
+          )}
+        </form>
       </div>
       <div className='flex-auto mt-3.5 lg:pl-8 text-[16px] font-normal  tracking-wide leading-10 text-white'>
         <span className='font-bold hover:text-[#408ACD] pointer-events-none'>
